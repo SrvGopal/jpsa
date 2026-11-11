@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/admin/submissions/[id]/file": {},
+    "/api/admin/submissions/[id]/revisions": {},
+    "/api/admin/submissions/[id]": {},
+    "/api/admin/submissions/[id]/decision": {},
+    "/api/submissions/[id]/file": {},
+    "/api/submissions": {},
+    "/api/auth/[...all]": {},
+    "/api/admin/submissions/[id]/reviewers": {},
+    "/api/uploads/presign": {},
+    "/api/admin/login": {}
+  }
+}

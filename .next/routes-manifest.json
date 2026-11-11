@@ -1,0 +1,291 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/submissions/[id]",
+      "regex": "^/admin/submissions/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/submissions/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/submissions/[id]",
+      "regex": "^/api/admin/submissions/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/submissions/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/admin/submissions/[id]/decision",
+      "regex": "^/api/admin/submissions/([^/]+?)/decision(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/submissions/(?<nxtPid>[^/]+?)/decision(?:/)?$"
+    },
+    {
+      "page": "/api/admin/submissions/[id]/file",
+      "regex": "^/api/admin/submissions/([^/]+?)/file(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/submissions/(?<nxtPid>[^/]+?)/file(?:/)?$"
+    },
+    {
+      "page": "/api/admin/submissions/[id]/reviewers",
+      "regex": "^/api/admin/submissions/([^/]+?)/reviewers(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/submissions/(?<nxtPid>[^/]+?)/reviewers(?:/)?$"
+    },
+    {
+      "page": "/api/admin/submissions/[id]/revisions",
+      "regex": "^/api/admin/submissions/([^/]+?)/revisions(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/admin/submissions/(?<nxtPid>[^/]+?)/revisions(?:/)?$"
+    },
+    {
+      "page": "/api/auth/[...all]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPall": "nxtPall"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPall>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/submissions/[id]/file",
+      "regex": "^/api/submissions/([^/]+?)/file(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/submissions/(?<nxtPid>[^/]+?)/file(?:/)?$"
+    },
+    {
+      "page": "/articles/[slug]",
+      "regex": "^/articles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/articles/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/issues/[volume]/[issue]",
+      "regex": "^/issues/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPvolume": "nxtPvolume",
+        "nxtPissue": "nxtPissue"
+      },
+      "namedRegex": "^/issues/(?<nxtPvolume>[^/]+?)/(?<nxtPissue>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/about/aims-and-scope",
+      "regex": "^/about/aims\\-and\\-scope(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about/aims\\-and\\-scope(?:/)?$"
+    },
+    {
+      "page": "/about/editorial-board",
+      "regex": "^/about/editorial\\-board(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about/editorial\\-board(?:/)?$"
+    },
+    {
+      "page": "/about/journal-information",
+      "regex": "^/about/journal\\-information(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about/journal\\-information(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard",
+      "regex": "^/admin/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard(?:/)?$"
+    },
+    {
+      "page": "/admin/login",
+      "regex": "^/admin/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/login(?:/)?$"
+    },
+    {
+      "page": "/admin/submissions",
+      "regex": "^/admin/submissions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/submissions(?:/)?$"
+    },
+    {
+      "page": "/apc",
+      "regex": "^/apc(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/apc(?:/)?$"
+    },
+    {
+      "page": "/articles",
+      "regex": "^/articles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/articles(?:/)?$"
+    },
+    {
+      "page": "/authors",
+      "regex": "^/authors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authors(?:/)?$"
+    },
+    {
+      "page": "/authors/guidelines",
+      "regex": "^/authors/guidelines(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authors/guidelines(?:/)?$"
+    },
+    {
+      "page": "/authors/manuscript-preparation",
+      "regex": "^/authors/manuscript\\-preparation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authors/manuscript\\-preparation(?:/)?$"
+    },
+    {
+      "page": "/authors/peer-review",
+      "regex": "^/authors/peer\\-review(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authors/peer\\-review(?:/)?$"
+    },
+    {
+      "page": "/authors/submission-process",
+      "regex": "^/authors/submission\\-process(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/authors/submission\\-process(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/indexing",
+      "regex": "^/indexing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/indexing(?:/)?$"
+    },
+    {
+      "page": "/issues",
+      "regex": "^/issues(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/issues(?:/)?$"
+    },
+    {
+      "page": "/policies",
+      "regex": "^/policies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies(?:/)?$"
+    },
+    {
+      "page": "/policies/authorship",
+      "regex": "^/policies/authorship(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/authorship(?:/)?$"
+    },
+    {
+      "page": "/policies/conflicts-of-interest",
+      "regex": "^/policies/conflicts\\-of\\-interest(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/conflicts\\-of\\-interest(?:/)?$"
+    },
+    {
+      "page": "/policies/copyright",
+      "regex": "^/policies/copyright(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/copyright(?:/)?$"
+    },
+    {
+      "page": "/policies/corrections-and-retractions",
+      "regex": "^/policies/corrections\\-and\\-retractions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/corrections\\-and\\-retractions(?:/)?$"
+    },
+    {
+      "page": "/policies/plagiarism",
+      "regex": "^/policies/plagiarism(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/plagiarism(?:/)?$"
+    },
+    {
+      "page": "/policies/publication-ethics",
+      "regex": "^/policies/publication\\-ethics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policies/publication\\-ethics(?:/)?$"
+    },
+    {
+      "page": "/search",
+      "regex": "^/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/search(?:/)?$"
+    },
+    {
+      "page": "/submit",
+      "regex": "^/submit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/submit(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
