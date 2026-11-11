@@ -1,3 +1,17 @@
 .neon
 node_modules/
 .env.local
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Next.js
+.next/
+
+# Netlify
+.netlify/
+
+# Dependencies
+node_modules/
