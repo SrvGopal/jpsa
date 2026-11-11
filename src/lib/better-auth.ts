@@ -22,5 +22,7 @@ export const betterAuthInstance = betterAuth({
 
   trustedOrigins: [
     "http://localhost:3000",
+    "https://jpsa-journal.org.in",
+    "https://www.jpsa-journal.org.in"
   ],
 });
