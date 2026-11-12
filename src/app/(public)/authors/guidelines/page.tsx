@@ -21,16 +21,7 @@ export default function AuthorGuidelinesPage() {
         Journal of Physical Sciences Advances.
       </p>
 
-      <div className="notice">
-        <strong>Important publication information</strong>
-        <p>
-          These guidelines are a working version. The journal must
-          formally approve its manuscript template, article-specific
-          requirements, publication charges and final submission
-          policies before accepting manuscripts.
-        </p>
-      </div>
-
+      
       <section className="prose">
         <h2>1. Scope and suitability</h2>
 
@@ -215,9 +206,8 @@ export default function AuthorGuidelinesPage() {
           <strong>Submission portal not yet available</strong>
           <p>
             The online submission and manuscript tracking system
-            is under development. These guidelines do not constitute
-            an active submission channel.
-          </p>
+            is under development. Authors can send manuscripts through email
+
         </div>
 
         <h2>Related information</h2>
