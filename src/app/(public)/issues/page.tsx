@@ -116,7 +116,7 @@ export default function IssuesPage() {
         ) : (
           <div className="empty-state archive-empty">
             <div className="eyebrow">
-              ARCHIVE NOT YET ESTABLISHED
+              ARCHIVE COMING SOON
             </div>
 
             <h3>
