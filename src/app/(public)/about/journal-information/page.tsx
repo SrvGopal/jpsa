@@ -118,8 +118,16 @@ export default function JournalInformationPage() {
         <h2>Manuscript Submission</h2>
 
         <p className="prose">
-          The online manuscript submission system is
-          currently under development.
+          Authors may submit manuscripts to the JPSA Editorial Office
+          by email at{" "}
+          <a
+            href="mailto:editor@jpsa-journal.org.in"
+            className="text-link"
+          >
+            editor@jpsa-journal.org.in
+          </a>.
+          Please consult the author guidelines and submission process
+          before sending a manuscript.
         </p>
 
         <div className="notice">

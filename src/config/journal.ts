@@ -29,7 +29,7 @@ export const journal = {
   manuscriptSubmission: {
     enabled: false,
     message:
-      "The online manuscript submission system is not yet available. Please consult the author information section."
+      "Authors may submit manuscripts to the JPSA Editorial Office by email at editor@jpsa-journal.org.in."
   },
 
   contact: {

@@ -113,14 +113,18 @@ export default function AuthorsPage() {
           acceptance decision.
         </p>
 
-        <h2>Online submission</h2>
+        <h2>Manuscript submission</h2>
 
         <div className="notice">
-          <strong>Online submission is not yet available.</strong>
+          <strong>Submit your manuscript by email</strong>
           <p>
-            The manuscript submission portal is being prepared.
-            Please do not treat this informational page as confirmation
-            that a manuscript has been formally submitted.
+            Authors may submit manuscripts to the JPSA Editorial Office
+            at{" "}
+            <a href="mailto:editor@jpsa-journal.org.in" className="text-link">
+              editor@jpsa-journal.org.in
+            </a>.
+            Please review the submission instructions before sending
+            your manuscript.
           </p>
         </div>
       </section>

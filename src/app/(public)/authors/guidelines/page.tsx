@@ -200,14 +200,19 @@ export default function AuthorGuidelinesPage() {
           applicable publication ethics policies.
         </p>
 
-        <h2>12. Submission status</h2>
+        <h2>12. Manuscript submission</h2>
 
         <div className="notice">
-          <strong>Submission portal not yet available</strong>
+          <strong>Submission by email</strong>
           <p>
-            The online submission and manuscript tracking system
-            is under development. Authors can send manuscripts through email
-
+            Authors may submit manuscripts to the JPSA Editorial Office
+            at{" "}
+            <a href="mailto:editor@jpsa-journal.org.in">
+              editor@jpsa-journal.org.in
+            </a>.
+            Please consult the Submission Process page for instructions
+            on the information and files to include.
+          </p>
         </div>
 
         <h2>Related information</h2>

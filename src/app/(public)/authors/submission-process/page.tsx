@@ -25,13 +25,14 @@ export default function SubmissionProcessPage() {
       </p>
 
       <div className="notice">
-        <strong>Important submission information</strong>
+        <strong>Manuscript submission by email</strong>
         <p>
-          The online submission and manuscript tracking system
-          is currently under development. The instructions on
-          this page describe the intended submission procedure
-          and should not be treated as confirmation that the
-          submission portal is operational.
+          Submit your manuscript and relevant submission details
+          to the JPSA Editorial Office at{" "}
+          <a href="mailto:editor@jpsa-journal.org.in">
+            editor@jpsa-journal.org.in
+          </a>.
+          Please follow the instructions below when preparing your email.
         </p>
       </div>
 
@@ -89,8 +90,7 @@ export default function SubmissionProcessPage() {
 
         <p>
           Authors should prepare the following materials,
-          as applicable to the manuscript and the requirements
-          of the submission system:
+          as applicable to the manuscript:
         </p>
 
         <ul>
@@ -130,18 +130,18 @@ export default function SubmissionProcessPage() {
         <h2>5. Submission of manuscript details</h2>
 
         <p>
-          When the submission system becomes available,
-          authors will be expected to provide the relevant
-          manuscript information. This may include the
-          manuscript title, abstract, keywords, article
-          category, author details and institutional
-          affiliations.
+          Authors should include the relevant manuscript
+          information in their submission email. This should
+          include the manuscript title, abstract, keywords,
+          article category where applicable, author names and
+          institutional affiliations.
         </p>
 
         <p>
           The corresponding author should ensure that the
-          information entered into the submission system
-          matches the details in the manuscript.
+          information provided in the email matches the details
+          in the manuscript and that all listed authors have
+          approved the submitted version.
         </p>
 
         <h2>6. Required declarations</h2>
@@ -216,7 +216,7 @@ export default function SubmissionProcessPage() {
           the specified deadline.
         </p>
 
-        <h2>10. Correspondence and manuscript tracking</h2>
+        <h2>10. Correspondence with the Editorial Office</h2>
 
         <p>
           The corresponding author should monitor
@@ -227,10 +227,13 @@ export default function SubmissionProcessPage() {
         </p>
 
         <p>
-          Once the online manuscript tracking facility
-          is operational, authors may be provided with
-          access to submission status information through
-          the designated system.
+          The corresponding author should use the email address
+          provided in the submission for all communication with
+          the editorial office. Any enquiries about a submitted
+          manuscript should be sent to{" "}
+          <a href="mailto:editor@jpsa-journal.org.in">
+            editor@jpsa-journal.org.in
+          </a>.
         </p>
 
         <h2>11. Publication after acceptance</h2>

@@ -3,7 +3,7 @@ import { journalInfo } from "@/lib/journal-content";
 
 export default function AboutPage() {
   return (
-    <main className="journal-content-page">
+    <main className="journal-content-page about-journal-page">
       <section className="journal-page-hero">
         <div className="container">
           <p className="eyebrow">ABOUT JPSA</p>

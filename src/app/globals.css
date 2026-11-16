@@ -2701,9 +2701,7 @@ p {
   box-shadow: none;
 }
 
-.journal-content-page .journal-content-section {
-  width: 100%;
-}
+
 
 .journal-content-page .prose {
   max-width: none;
@@ -3014,5 +3012,215 @@ main.page .eyebrow {
     align-items: flex-start;
     flex-direction: column;
     padding: 21px;
+  }
+}
+
+
+/* ABOUT PAGE — CONTAINER AND TEXT ALIGNMENT FIX */
+
+.journal-content-page > .journal-content-section.container {
+  width: auto;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.journal-content-page .journal-content-section p:not(.eyebrow) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.journal-content-page .journal-mission-list li,
+.journal-content-page .subject-area-card li {
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  .journal-content-page > .journal-content-section.container {
+    width: calc(100% - 40px);
+  }
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE — REFINED LAYOUT
+   ===================================================== */
+
+.about-journal-page .journal-content-section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.about-journal-page .journal-content-narrow {
+  max-width: 1080px;
+}
+
+.about-journal-page .journal-content-section p:not(.eyebrow) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Restore the subject-area grid on the About page.
+   The guideline-page overrides should not affect it. */
+
+.about-journal-page .subject-area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.about-journal-page .subject-area-card {
+  padding: 25px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: none;
+}
+
+.about-journal-page .subject-area-card h3 {
+  margin: 0 0 15px;
+}
+
+.about-journal-page .subject-area-card li {
+  text-align: left;
+}
+
+/* Homepage headline — approximately 15% smaller */
+
+.hero h1 {
+  font-size: clamp(31px, 4.25vw, 53px);
+}
+
+@media (max-width: 700px) {
+  .about-journal-page .journal-content-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .about-journal-page .subject-area-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   JPSA — COMPACT LONG-FORM CONTENT LAYOUT
+   Policies and Author Information
+   ===================================================== */
+
+/* Reduce spacing between consecutive content sections.
+   Keep the About page's separately defined spacing. */
+
+.journal-content-page:not(.about-journal-page) .journal-content-section {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* Reduce excessive gaps between headings and paragraphs
+   in policy and other long-form informational pages. */
+
+.page .prose h2 {
+  margin-top: 26px;
+  margin-bottom: 14px;
+}
+
+.page .prose h2:first-child {
+  margin-top: 0;
+}
+
+.page .prose h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.page .prose p {
+  margin-bottom: 13px;
+}
+
+/* Compact manuscript preparation sections */
+
+.journal-content-page:not(.about-journal-page)
+.journal-content-section > h2 {
+  margin-bottom: 14px;
+}
+
+.journal-content-page:not(.about-journal-page)
+.journal-content-section > p {
+  margin-bottom: 14px;
+}
+
+/* Consistent spacing on smaller screens */
+
+@media (max-width: 700px) {
+  .journal-content-page:not(.about-journal-page)
+  .journal-content-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .page .prose h2 {
+    margin-top: 22px;
+  }
+}
+
+/* =====================================================
+   JPSA — COMPACT LONG-FORM CONTENT LAYOUT
+   Policies and Author Information
+   ===================================================== */
+
+/* Reduce spacing between consecutive content sections.
+   Keep the About page's separately defined spacing. */
+
+.journal-content-page:not(.about-journal-page) .journal-content-section {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* Reduce excessive gaps between headings and paragraphs
+   in policy and other long-form informational pages. */
+
+.page .prose h2 {
+  margin-top: 26px;
+  margin-bottom: 14px;
+}
+
+.page .prose h2:first-child {
+  margin-top: 0;
+}
+
+.page .prose h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.page .prose p {
+  margin-bottom: 13px;
+}
+
+/* Compact manuscript preparation sections */
+
+.journal-content-page:not(.about-journal-page)
+.journal-content-section > h2 {
+  margin-bottom: 14px;
+}
+
+.journal-content-page:not(.about-journal-page)
+.journal-content-section > p {
+  margin-bottom: 14px;
+}
+
+/* Consistent spacing on smaller screens */
+
+@media (max-width: 700px) {
+  .journal-content-page:not(.about-journal-page)
+  .journal-content-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .page .prose h2 {
+    margin-top: 22px;
   }
 }
