@@ -71,6 +71,19 @@ export async function GET(
         { status: 404 }
       );
     }
+    
+    console.error("[JPSA FILE DIAGNOSTIC]", {
+  submissionId: id,
+  kind,
+  filePath,
+  bucket: STORAGE_BUCKET,
+  supabaseHost: process.env.SUPABASE_URL
+    ? new URL(process.env.SUPABASE_URL).hostname
+    : "missing",
+  databaseHost: process.env.DATABASE_URL
+    ? new URL(process.env.DATABASE_URL).hostname
+    : "missing",
+});
 
     // Generate a temporary signed URL for the private PDF
     const { data, error } = await storage
