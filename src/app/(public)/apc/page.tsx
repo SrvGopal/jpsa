@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Article Processing Charges | JPSA",
+  title: "Article Processing Charges | JPSTA",
   description:
-    "Article processing charges, waiver eligibility and payment policy of the Journal of Physical Sciences Advances.",
+    "Article processing charges, waiver eligibility and payment policy of the Journal of Physical Sciences and Technological Advances.",
 };
 
 export default function APCPage() {
@@ -16,7 +16,7 @@ export default function APCPage() {
       <h1>Article Processing Charges</h1>
 
       <p className="lead">
-        The Journal of Physical Sciences Advances (JPSA) aims
+        The Journal of Physical Sciences and Technological Advances (JPSTA) aims
         to maintain a transparent and accessible publication
         process. Article Processing Charges (APCs), where
         applicable, support the editorial and technical
@@ -28,7 +28,7 @@ export default function APCPage() {
         <h2>1. Article Processing Charge Policy</h2>
 
         <p>
-          JPSA proposes a publication charge structure based
+          JPSTA proposes a publication charge structure based
           on the author's billing location, manuscript length
           and article category. The applicable charge is
           communicated to the corresponding author following
@@ -47,7 +47,7 @@ export default function APCPage() {
 <h2>2. Article Processing Charges</h2>
 
 <p>
-  JPSA proposes separate publication charges for Indian
+  JPSTA proposes separate publication charges for Indian
   and international authors. The applicable charge is
   determined by the article category and manuscript length.
   Payment is requested only after formal acceptance.
@@ -183,7 +183,7 @@ export default function APCPage() {
         <h2>6. Waiver and Discount Eligibility</h2>
 
         <p>
-          JPSA recognises that publication costs may create
+          JPSTA recognises that publication costs may create
           difficulties for researchers who do not have
           institutional funding or adequate financial
           support. Authors may therefore request a full
@@ -278,7 +278,7 @@ export default function APCPage() {
           will receive the applicable APC amount and
           official payment instructions from the journal.
           Authors should make payments only through
-          payment channels formally authorised by JPSA.
+          payment channels formally authorised by JPSTA.
         </p>
 
         <p>
@@ -343,7 +343,7 @@ export default function APCPage() {
         <h2>12. No Additional Undisclosed Charges</h2>
 
         <p>
-          JPSA should communicate all mandatory
+          JPSTA should communicate all mandatory
           publication charges to authors before
           payment. Authors should not be asked
           to pay undisclosed fees for submission,

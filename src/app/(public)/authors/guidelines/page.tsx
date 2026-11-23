@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Author Guidelines | JPSA",
+  title: "Author Guidelines | JPSTA",
   description:
-    "Guidance for authors preparing manuscripts for the Journal of Physical Sciences Advances.",
+    "Guidance for authors preparing manuscripts for the Journal of Physical Sciences and Technological Advances.",
 };
 
 export default function AuthorGuidelinesPage() {
@@ -18,7 +18,7 @@ export default function AuthorGuidelinesPage() {
       <p className="lead">
         These guidelines describe the general expectations for
         preparing scholarly manuscripts for consideration by the
-        Journal of Physical Sciences Advances.
+        Journal of Physical Sciences and Technological Advances (JPSTA).
       </p>
 
       
@@ -26,9 +26,11 @@ export default function AuthorGuidelinesPage() {
         <h2>1. Scope and suitability</h2>
 
         <p>
-          Manuscripts should address relevant topics in physics and
-          the physical sciences, including theoretical, experimental,
-          computational and interdisciplinary research.
+          Manuscripts should address a topic within JPSTA's approved
+          subject areas: physical sciences, chemical sciences,
+          mathematical sciences, computer science and information
+          technology, or electrical and electronics, mechanical, or civil
+          engineering. Interdisciplinary research is welcome.
         </p>
 
         <p>
@@ -205,7 +207,7 @@ export default function AuthorGuidelinesPage() {
         <div className="notice">
           <strong>Submission by email</strong>
           <p>
-            Authors may submit manuscripts to the JPSA Editorial Office
+            Authors may submit manuscripts to the JPSTA Editorial Office
             at{" "}
             <a href="mailto:editor@jpsa-journal.org.in">
               editor@jpsa-journal.org.in

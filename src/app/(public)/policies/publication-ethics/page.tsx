@@ -90,7 +90,7 @@ export default function Page() {
         <h2>1. Ethical Framework</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) recognises that
+          Journal of Physical Sciences and Technological Advances (JPSTA) recognises that
           responsible scholarly publishing depends on honesty,
           transparency, accountability, and respect for the scientific
           record. Every stage of publication, from manuscript preparation
@@ -140,7 +140,7 @@ export default function Page() {
         <h2>3. Ethical Responsibilities in Research</h2>
 
         <p>
-          Research submitted to JPSA should be conducted and reported
+          Research submitted to JPSTA should be conducted and reported
           honestly. Authors are expected to preserve the accuracy of
           their research records and present methods, observations,
           results, and interpretations without deliberate distortion.
@@ -167,7 +167,7 @@ export default function Page() {
         <h2>4. Research Misconduct</h2>
 
         <p>
-          JPSA does not accept research practices that compromise
+          JPSTA does not accept research practices that compromise
           the reliability of scientific findings or misrepresent
           the contributions of researchers. Potential forms of
           misconduct include:
@@ -272,7 +272,7 @@ export default function Page() {
 
         <p>
           Further requirements are provided in the journal's{" "}
-          <Link href="/policies/conflict-of-interest">
+          <Link href="/policies/conflicts-of-interest">
             Conflict of Interest Policy
           </Link>.
         </p>
@@ -377,17 +377,17 @@ export default function Page() {
 
         <ul>
           <li>
-            <Link href="/policies/plagiarism-policy">
+            <Link href="/policies/plagiarism">
               Plagiarism Policy
             </Link>
           </li>
           <li>
-            <Link href="/policies/authorship-policy">
+            <Link href="/policies/authorship">
               Authorship Policy
             </Link>
           </li>
           <li>
-            <Link href="/policies/conflict-of-interest">
+            <Link href="/policies/conflicts-of-interest">
               Conflict of Interest Policy
             </Link>
           </li>

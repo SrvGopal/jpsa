@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
         <div className="admin-login-brand">
           <div className="admin-login-mark">J</div>
           <div>
-            <strong>JPSA</strong>
+            <strong>JPSTA</strong>
             <span>Editorial Administration</span>
           </div>
         </div>

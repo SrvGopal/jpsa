@@ -8,8 +8,8 @@ export default function Page() {
 
       <p className="lead">
         For editorial correspondence, manuscript-related enquiries, and
-        questions concerning the Journal of Physical Science Advances,
-        please contact the editorial office.
+        questions concerning the Journal of Physical Sciences and
+        Technological Advances, please contact the editorial office.
       </p>
 
       <section className="contact-section">
@@ -68,10 +68,11 @@ export default function Page() {
         </ul>
       </section>
 
-  
       <div className="contact-footer-note">
-        <strong>Journal of Physical Science Advances (JPSA)</strong>
-        <span>Connecting Physics with the Allied Sciences</span>
+        <strong>
+          Journal of Physical Sciences and Technological Advances (JPSTA)
+        </strong>
+        <span>Connecting Science, Engineering and Technology</span>
       </div>
     </main>
   );

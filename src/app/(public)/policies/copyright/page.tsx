@@ -20,7 +20,7 @@ const authorRights = [
   {
     title: "Acknowledgement of First Publication",
     description:
-      "Where an article has been published by JPSA, subsequent authorised distribution or reuse should acknowledge the original publication and provide an appropriate citation to the published article.",
+      "Where an article has been published by JPSTA, subsequent authorised distribution or reuse should acknowledge the original publication and provide an appropriate citation to the published article.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Page() {
         <h2>1. Policy Statement</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) recognises
+          Journal of Physical Science and Technological Advances (JPSTA) recognises
           copyright as an important means of protecting the
           intellectual contributions of authors and other
           rights holders. The journal expects all submitted
@@ -125,7 +125,7 @@ export default function Page() {
 
         <p>
           Authors should understand the rights they retain
-          and the permissions they grant to JPSA when
+          and the permissions they grant to JPSTA when
           their work is accepted for publication.
           Subject to the final publication agreement,
           author rights may include:
@@ -144,7 +144,7 @@ export default function Page() {
           Authors must not grant conflicting rights to
           another publisher or party in a manner that
           prevents them from fulfilling the publication
-          agreement with JPSA.
+          agreement with JPSTA.
         </p>
       </section>
 
@@ -198,7 +198,7 @@ export default function Page() {
         </p>
 
         <p>
-          JPSA should clearly identify the applicable
+          JPSTA should clearly identify the applicable
           licence for each published article and ensure
           that the licence terms are consistent with
           the publication agreement accepted by the
@@ -217,7 +217,7 @@ export default function Page() {
         <h2>6. Use and Reproduction of Published Articles</h2>
 
         <p>
-          Reuse of articles published by JPSA must
+          Reuse of articles published by JPSTA must
           comply with the copyright and licensing
           conditions applicable to the individual
           publication. Users should distinguish
@@ -248,7 +248,7 @@ export default function Page() {
         <h2>7. Copyright Infringement</h2>
 
         <p>
-          JPSA does not permit the unauthorised
+          JPSTA does not permit the unauthorised
           reproduction or distribution of copyrighted
           material. Authors must ensure that their
           submissions do not infringe the rights of
@@ -277,7 +277,7 @@ export default function Page() {
 
         <p>
           Individuals or organisations seeking to
-          reproduce material published by JPSA should
+          reproduce material published by JPSTA should
           first review the copyright and licence
           information associated with the article.
         </p>
@@ -329,7 +329,7 @@ export default function Page() {
         <h2>10. Editorial Commitment</h2>
 
         <p>
-          JPSA expects authors and users to respect
+          JPSTA expects authors and users to respect
           intellectual property rights and comply
           with the copyright terms governing submitted
           and published material.
@@ -349,11 +349,11 @@ export default function Page() {
 
         <p>
           Authors should also consult the journal's{" "}
-          <Link href="/policies/authorship-policy">
+          <Link href="/policies/authorship">
             Authorship Policy
           </Link>
           ,{" "}
-          <Link href="/policies/plagiarism-policy">
+          <Link href="/policies/plagiarism">
             Plagiarism Policy
           </Link>
           , and{" "}

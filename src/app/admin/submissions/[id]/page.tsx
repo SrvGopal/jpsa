@@ -48,7 +48,7 @@ export default async function SubmissionDetailPage({
     <main className="admin-dashboard">
       <header className="admin-dashboard-header">
         <div>
-          <span className="admin-eyebrow">JPSA EDITORIAL OFFICE</span>
+          <span className="admin-eyebrow">JPSTA EDITORIAL OFFICE</span>
           <h1>Manuscript details</h1>
           <p>
             Review submission information and manage its editorial progress.

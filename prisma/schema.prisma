@@ -161,7 +161,7 @@ model Submission {
 
 // ============================================================
 // STRUCTURED SUBMISSION AUTHORS
-// Co-authors do not need JPSA accounts.
+// Co-authors do not need JPSTA accounts.
 // ============================================================
 
 model SubmissionAuthor {

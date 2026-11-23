@@ -1,9 +1,10 @@
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Submit Your Manuscript | JPSA",
+  title: "Submit Your Manuscript | JPSTA",
   description:
-    "Instructions for submitting manuscripts to the Journal of Physical Sciences Advances.",
+    "Instructions for submitting manuscripts to the Journal of Physical Sciences and Technological Advances.",
 };
 
 const editorialEmail = "editor@jpsa-journal.org.in";
@@ -17,24 +18,21 @@ export default function SubmitManuscriptPage() {
 
       <p className="lead">
         Authors may submit their manuscripts to the Journal of Physical
-        Sciences Advances (JPSA) by email to the Editorial Office.
-        Please review the author guidelines and submission requirements
-        before sending your manuscript.
+        Sciences and Technological Advances (JPSTA) by email to the
+        Editorial Office. Please review the author guidelines and
+        submission requirements before sending your manuscript.
       </p>
 
       <section className="prose">
         <h2>Manuscript submission by email</h2>
 
         <div className="notice">
-          <strong>Submit your manuscript to the JPSA Editorial Office</strong>
+          <strong>Submit your manuscript to the JPSTA Editorial Office</strong>
           <p>
             Send your manuscript and relevant submission details to:
           </p>
           <p>
-            <a
-              href={`mailto:${editorialEmail}`}
-              className="text-link"
-            >
+            <a href={`mailto:${editorialEmail}`} className="text-link">
               {editorialEmail}
             </a>
           </p>

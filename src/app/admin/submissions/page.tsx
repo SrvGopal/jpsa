@@ -62,7 +62,7 @@ export default async function SubmissionsPage({
     <main className="admin-dashboard">
       <header className="admin-dashboard-header">
         <div>
-          <span className="admin-eyebrow">JPSA ADMINISTRATION</span>
+          <span className="admin-eyebrow">JPSTA ADMINISTRATION</span>
           <h1>Submissions</h1>
           <p>Review and manage manuscripts submitted to the journal.</p>
         </div>

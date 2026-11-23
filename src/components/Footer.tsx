@@ -10,7 +10,7 @@ const footerGroups = [
   {
     title: "The Journal",
     links: [
-      { label: "About JPSA", href: "/about" },
+      { label: "About JPSTA", href: "/about" },
       { label: "Aims and Scope", href: "/about/aims-and-scope" },
       { label: "Journal Information", href: "/about/journal-information" },
       { label: "Editorial Board", href: "/about/editorial-board" },
@@ -46,21 +46,16 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container">
         <div className="footer-grid">
-
-          {/* JOURNAL IDENTITY */}
-
           <div className="footer-identity">
             <Link href="/" className="footer-logo">
               <Image
                 src="/logo/jpsa-emblem.png"
-                alt="JPSA emblem"
+                alt="JPSTA emblem"
                 width={66}
                 height={66}
               />
 
-              <span>
-                {journal.shortName}
-              </span>
+              <span>{journal.shortName}</span>
             </Link>
 
             <h3 className="footer-journal-name">
@@ -68,8 +63,8 @@ export default function Footer() {
             </h3>
 
             <p>
-              A scholarly platform dedicated to research
-              and advances across the physical sciences.
+              An interdisciplinary scholarly platform for research across
+              science, engineering and technology.
             </p>
 
             <p className="footer-motto">
@@ -77,33 +72,24 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* NAVIGATION GROUPS */}
-
           {footerGroups.map((group) => (
             <div key={group.title}>
               <h3>{group.title}</h3>
 
               <nav aria-label={group.title}>
                 {group.links.map((link) => (
-                  <Link
-                    href={link.href}
-                    key={link.href}
-                  >
+                  <Link href={link.href} key={link.href}>
                     {link.label}
                   </Link>
                 ))}
               </nav>
             </div>
           ))}
-
         </div>
-
-        {/* CONTACT AND STATUS */}
 
         <div className="footer-contact">
           <div>
             <span>Editorial correspondence</span>
-
             <a href={`mailto:${journal.contact.editorial}`}>
               {journal.contact.editorial}
             </a>
@@ -119,8 +105,6 @@ export default function Footer() {
             <strong>{journal.accessModel}</strong>
           </div>
         </div>
-
-        {/* COPYRIGHT */}
 
         <div className="footer-bottom">
           <p>

@@ -86,8 +86,8 @@ export default function ManuscriptPreparationPage() {
         <h2>Preparing Your Manuscript</h2>
         <div className="prose">
           <p>
-            Authors submitting manuscripts to the Journal of Physical Science
-            Advances (JPSA) are expected to prepare their work in a clear,
+            Authors submitting manuscripts to the Journal of Physical Sciences
+            and Technological Advances (JPSTA) are expected to prepare their work in a clear,
             organised and scientifically rigorous manner. A well-prepared
             manuscript helps editors and reviewers assess the quality,
             originality and relevance of the research.
@@ -197,7 +197,7 @@ export default function ManuscriptPreparationPage() {
         <h2>Before Submission</h2>
         <p>Authors should check that:</p>
         <ul>
-          <li>The manuscript falls within the scope of JPSA.</li>
+          <li>The manuscript falls within the scope of JPSTA.</li>
           <li>The work is original and is not under consideration elsewhere.</li>
           <li>All authors have reviewed and approved the submitted version.</li>
           <li>Author details and affiliations are accurate.</li>
@@ -212,17 +212,17 @@ export default function ManuscriptPreparationPage() {
         <div className="prose">
           <p>
             Please also consult the{" "}
-            <Link href="/policies/plagiarism-policy">Plagiarism Policy</Link>,{" "}
-            <Link href="/policies/authorship-policy">Authorship Policy</Link>{" "}
+            <Link href="/policies/plagiarism">Plagiarism Policy</Link>,{" "}
+            <Link href="/policies/authorship">Authorship Policy</Link>{" "}
             and{" "}
-            <Link href="/policies/conflict-of-interest">
+            <Link href="/policies/conflicts-of-interest">
               Conflict of Interest Policy
             </Link>{" "}
             before submitting your manuscript.
           </p>
           <p>
             For instructions on sending a manuscript to the journal, see the{" "}
-            <Link href="/author-guidelines/submission-process">
+            <Link href="/authors/submission-process">
               Submission Process
             </Link>
             .

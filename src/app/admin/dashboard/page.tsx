@@ -62,7 +62,7 @@ export default async function AdminDashboard() {
     <main className="admin-dashboard">
       <header className="admin-dashboard-header">
         <div>
-          <span className="admin-eyebrow">JPSA ADMINISTRATION</span>
+          <span className="admin-eyebrow">JPSTA ADMINISTRATION</span>
           <h1>Dashboard</h1>
           <p>Welcome back, {admin.name}.</p>
         </div>
@@ -112,7 +112,7 @@ export default async function AdminDashboard() {
         <div className="admin-panel-heading">
           <div>
             <h2>Recent submissions</h2>
-            <p>The latest manuscripts received by JPSA.</p>
+            <p>The latest manuscripts received by JPSTA.</p>
           </div>
           <Link href="/admin/submissions">View all submissions →</Link>
         </div>

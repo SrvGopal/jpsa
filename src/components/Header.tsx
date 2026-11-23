@@ -21,7 +21,7 @@ export default function Header() {
         <Link href="/" className="brand">
           <Image
             src="/logo/jpsa-emblem.png"
-            alt="JPSA Journal Emblem"
+            alt="JPSTA Journal Emblem"
             width={64}
             height={64}
             className="brand-logo"

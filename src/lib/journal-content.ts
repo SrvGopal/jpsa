@@ -1,77 +1,130 @@
 
 export const journalInfo = {
-  name: "Journal of Physical Science Advances",
-  abbreviation: "JPSA",
+  name: "Journal of Physical Sciences and Technological Advances",
+  abbreviation: "JPSTA",
 
   about:
-    "Journal of Physical Science Advances (JPSA) is an interdisciplinary, peer-reviewed scientific journal dedicated to the publication of high-quality original research, review articles, short communications, and theoretical and computational studies across Physics and its allied scientific disciplines. The journal aims to provide a common platform for researchers, academicians, scientists, and young investigators working at the interfaces of Physics, Chemistry, Mathematics, Materials Science, Computational Science, and related areas. JPSA particularly welcomes research that develops new physical concepts, theoretical models, experimental techniques, computational approaches, and interdisciplinary applications. The journal seeks to encourage interaction among different scientific disciplines and promote research addressing emerging challenges in fundamental and applied sciences.",
+    "The Journal of Physical Sciences and Technological Advances (JPSTA) is an interdisciplinary, peer-reviewed journal dedicated to publishing high-quality original research articles, review papers, short communications, and theoretical, experimental and computational studies across its approved scientific, engineering and technology disciplines. The journal welcomes contributions spanning fundamental research, engineering innovation, technological development and interdisciplinary applications. JPSTA provides a platform for researchers, academicians, engineers, scientists and industry professionals to exchange knowledge, advance understanding and address emerging challenges across diverse fields.",
 
   theme: {
-    title: "Connecting Physics with the Allied Sciences",
+    title: "Advancing Physical Sciences, Engineering and Technology",
     description:
-      "The central theme of JPSA is the integration of fundamental principles of Physics with Chemistry, Mathematics and other allied scientific disciplines to understand, model and solve problems in physical and natural sciences.",
+      "JPSTA promotes scientific discovery, engineering innovation and technological advancement across its approved subject areas, encouraging both specialised and interdisciplinary research.",
   },
 
   subjectAreas: [
     {
-      title: "Physics",
-      topics: [
-        "Condensed Matter and Solid-State Physics",
-        "Materials Physics",
+      title: "Physics and Physical Sciences",
+      areas: [
+        "Theoretical Physics",
+        "Experimental Physics",
+        "Applied Physics",
+        "Quantum Physics",
+        "Condensed Matter Physics",
+        "Optics and Photonics",
+        "Nuclear and Particle Physics",
+        "Astrophysics",
         "Computational Physics",
-        "Quantum Physics and Quantum Materials",
-        "Atomic, Molecular and Optical Physics",
-        "Astrophysics and Space Physics",
-        "Electronics and Semiconductor Physics",
-        "Experimental and Theoretical Physics",
       ],
     },
     {
-      title: "Chemistry and Materials",
-      topics: [
+      title: "Chemistry and Chemical Sciences",
+      areas: [
+        "Organic Chemistry",
+        "Inorganic Chemistry",
         "Physical Chemistry",
-        "Inorganic and Materials Chemistry",
-        "Computational Chemistry",
-        "Chemical Physics",
-        "Energy and Functional Materials",
-        "Polymers and Advanced Materials",
+        "Analytical Chemistry",
+        "Theoretical and Computational Chemistry",
+        "Biochemistry",
+        "Environmental Chemistry",
+        "Industrial Chemistry",
       ],
     },
     {
-      title: "Mathematical & Computational Sciences",
-      topics: [
+      title: "Mathematical Sciences",
+      areas: [
+        "Pure Mathematics",
         "Applied Mathematics",
+        "Computational Mathematics",
         "Mathematical Modelling",
-        "Numerical Methods",
-        "Computational Modelling",
-        "Data-driven approaches in Physical Sciences",
+        "Statistics and Probability",
+        "Numerical Analysis",
+        "Differential Equations",
+        "Optimization",
+        "Discrete Mathematics",
       ],
     },
     {
-      title: "Interdisciplinary Research",
-      topics: [
-        "Physics–Chemistry interfaces",
-        "Physics–Mathematics interfaces",
-        "Materials Physics and Chemistry",
-        "Computational Materials Science",
-        "Environmental and Atmospheric Physics",
-        "Energy and Sustainable Materials",
-        "Emerging interdisciplinary physical sciences",
+      title: "Computer Science and Information Technology",
+      areas: [
+        "Algorithms and Data Structures",
+        "Artificial Intelligence and Machine Learning",
+        "Data Science",
+        "Software Engineering",
+        "Computer Networks",
+        "Cybersecurity",
+        "Database Systems",
+        "Computer Architecture",
+        "Distributed and Cloud Computing",
+        "Internet of Things",
+      ],
+    },
+    {
+      title: "Electrical and Electronics Engineering",
+      areas: [
+        "Electrical Power Systems",
+        "Power Electronics",
+        "Electronics Engineering",
+        "Communication Systems",
+        "Signal Processing",
+        "Control Systems",
+        "Instrumentation",
+        "VLSI and Microelectronics",
+        "Embedded Systems",
+      ],
+    },
+    {
+      title: "Mechanical Engineering",
+      areas: [
+        "Mechanical Design",
+        "Thermal Engineering",
+        "Fluid Mechanics",
+        "Manufacturing Engineering",
+        "Robotics and Mechatronics",
+        "Automotive Engineering",
+        "Computational Mechanics",
+        "Machine Design",
+        "Industrial Engineering",
+      ],
+    },
+    {
+      title: "Civil Engineering",
+      areas: [
+        "Structural Engineering",
+        "Geotechnical Engineering",
+        "Transportation Engineering",
+        "Construction Engineering",
+        "Water Resources Engineering",
+        "Building Materials",
+        "Earthquake Engineering",
+        "Surveying and Geomatics",
       ],
     },
   ],
 
   vision:
-    "To establish JPSA as an international platform for innovative research at the intersection of Physics and allied sciences, fostering interdisciplinary collaboration and advancing fundamental and applied scientific knowledge.",
+    "To establish JPSTA as a multidisciplinary international platform for scientific discovery, engineering innovation and technological advancement.",
 
   mission: [
     "Publish original, rigorous and scientifically significant research.",
-    "Promote collaboration between Physics, Chemistry, Mathematics and allied disciplines.",
-    "Provide a platform for emerging researchers and established scientists.",
-    "Encourage theoretical, experimental, computational and interdisciplinary research.",
-    "Disseminate research addressing both fundamental scientific questions and technological applications.",
+    "Welcome high-quality contributions across the journal's approved scientific, engineering and technology disciplines.",
+    "Promote interdisciplinary collaboration across scientific and engineering disciplines.",
+    "Provide a platform for emerging researchers and established professionals.",
+    "Encourage theoretical, experimental, computational and applied research.",
+    "Disseminate research addressing fundamental scientific questions and technological challenges.",
   ],
 };
+
 
 export const editorialBoard = {
   chiefEditor: [
@@ -96,7 +149,25 @@ export const editorialBoard = {
   ],
 
   editors: [
-    { name: "Dr. Shyamendra P. Singh", country: "India" },
+    {
+      name: "Dr. Shyamendra Pratap Singh",
+      designation: "Assistant Professor",
+      department: "Department of Physics",
+      institution: "MB Government Post Graduate College",
+      city: "Haldwani, Nainital",
+      country: "India",
+    },
+    {
+      name: "Dr. Anoop Kumar Srivastava",
+      designation: "Associate Professor & Head",
+      department: "Department of Applied Science",
+      institution:
+        "Institute of Engineering & Technology, Dr. Rammanohar Lohia Avadh University",
+      city: "Ayodhya – 224001",
+      country: "India",
+      email: "anoopall@gmail.com",
+      photoUrl: "/images/editorial/anoop-srivastava.jpg",
+    },
     { name: "Dr. R.K. Mishra", country: "India" },
     { name: "Dr. P.C. Srivastava", country: "India" },
     { name: "Dr. S.P. Mishra", country: "India" },
@@ -105,23 +176,9 @@ export const editorialBoard = {
 
   secretary: {
     name: "Mrs. S. Priya",
-    designation: "Secretary, JPSA",
+    designation: "Secretary, JPSTA",
     office: "Head Office, New Delhi, India",
   },
 };
 
-export const indexingServices = [
-  "Scopus",
-  "SCImago Journal Rank",
-  "Google Scholar",
-  "EBSCO",
-  "EconPapers",
-  "IDEAS",
-  "Dimensions",
-  "WorldCat",
-  "Crossref",
-  "Scilit (Switzerland)",
-  "Electronic Journals Library (EZB)",
-  "DOI",
-  "EconBiz",
-];
+

@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Submission Process | JPSA",
+  title: "Submission Process | JPSTA",
   description:
-    "Instructions and requirements for submitting manuscripts to the Journal of Physical Sciences Advances.",
+    "Instructions and requirements for submitting manuscripts to the Journal of Physical Sciences and Technological Advances.",
 };
 
 export default function SubmissionProcessPage() {
@@ -16,7 +16,7 @@ export default function SubmissionProcessPage() {
       <h1>Submission Process</h1>
 
       <p className="lead">
-        The Journal of Physical Sciences Advances (JPSA) welcomes
+        The Journal of Physical Sciences and Technological Advances (JPSTA) welcomes
         scholarly contributions within its areas of interest.
         Authors are expected to follow the journal's submission
         requirements and ensure that all necessary information
@@ -28,7 +28,7 @@ export default function SubmissionProcessPage() {
         <strong>Manuscript submission by email</strong>
         <p>
           Submit your manuscript and relevant submission details
-          to the JPSA Editorial Office at{" "}
+          to the JPSTA Editorial Office at{" "}
           <a href="mailto:editor@jpsa-journal.org.in">
             editor@jpsa-journal.org.in
           </a>.
@@ -41,11 +41,12 @@ export default function SubmissionProcessPage() {
 
         <p>
           Authors should first confirm that their manuscript
-          falls within the aims and scope of JPSA. The work
-          should be scientifically relevant to physics and
-          its allied disciplines, including theoretical,
-          experimental, computational and interdisciplinary
-          research.
+          falls within the aims and scope of JPSTA. The work
+          should fall within one or more of the journal's approved areas:
+          physical sciences, chemical sciences, mathematical sciences,
+          computer science and information technology, electrical and
+          electronics engineering, mechanical engineering, or civil
+          engineering. Interdisciplinary research is welcome.
         </p>
 
         <p>
@@ -58,7 +59,7 @@ export default function SubmissionProcessPage() {
         <h2>2. Originality and exclusive submission</h2>
 
         <p>
-          A manuscript submitted to JPSA should represent
+          A manuscript submitted to JPSTA should represent
           original scholarly work and should not be under
           consideration for publication by another journal
           at the same time.
@@ -260,7 +261,7 @@ export default function SubmissionProcessPage() {
         </p>
 
         <ul>
-          <li>The manuscript falls within the scope of JPSA.</li>
+          <li>The manuscript falls within the scope of JPSTA.</li>
           <li>The manuscript is original and not under consideration elsewhere.</li>
           <li>All authors have approved the final version.</li>
           <li>Author names and affiliations are accurate.</li>
@@ -294,12 +295,12 @@ export default function SubmissionProcessPage() {
             </Link>
           </li>
           <li>
-            <Link href="/policies/authorship-policy">
+            <Link href="/policies/authorship">
               Authorship Policy
             </Link>
           </li>
           <li>
-            <Link href="/policies/plagiarism-policy">
+            <Link href="/policies/plagiarism">
               Plagiarism Policy
             </Link>
           </li>

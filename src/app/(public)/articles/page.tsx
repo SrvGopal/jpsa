@@ -6,9 +6,9 @@ import ArticleCard from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
 
 export const metadata: Metadata = {
-  title: "Published Articles | JPSA",
+  title: "Published Articles | JPSTA",
   description:
-    "Browse and search scholarly publications in the Journal of Physical Sciences Advances."
+    "Browse and search scholarly publications in the Journal of Physical Sciences and Technological Advances."
 };
 
 type ArticlesPageProps = {
@@ -43,15 +43,15 @@ export default async function ArticlesPage({
   return (
     <div className="container page">
       <div className="eyebrow">
-        JPSA · SCHOLARLY PUBLICATIONS
+        JPSTA · SCHOLARLY PUBLICATIONS
       </div>
 
       <h1>Published Articles</h1>
 
       <p className="lead">
         Explore the scholarly publication record of the
-        Journal of Physical Sciences Advances. Search
-        articles by title, author, subject or keyword.
+        Journal of Physical Sciences and Technological Advances.
+        Search articles by title, author, subject or keyword.
       </p>
 
       <section className="article-catalogue">
@@ -67,10 +67,7 @@ export default async function ArticlesPage({
             </p>
           </div>
 
-          <Link
-            href="/issues"
-            className="text-link"
-          >
+          <Link href="/issues" className="text-link">
             Browse issues →
           </Link>
         </div>
@@ -93,10 +90,7 @@ export default async function ArticlesPage({
               defaultValue={query}
             />
 
-            <button
-              type="submit"
-              className="button button-dark"
-            >
+            <button type="submit" className="button button-dark">
               Search
             </button>
           </div>
@@ -108,10 +102,7 @@ export default async function ArticlesPage({
               Search results for: <strong>{query}</strong>
             </span>
 
-            <Link
-              href="/articles"
-              className="text-link"
-            >
+            <Link href="/articles" className="text-link">
               Clear search
             </Link>
           </div>
@@ -147,10 +138,7 @@ export default async function ArticlesPage({
             </p>
 
             {query ? (
-              <Link
-                href="/articles"
-                className="text-link"
-              >
+              <Link href="/articles" className="text-link">
                 View all publications →
               </Link>
             ) : (

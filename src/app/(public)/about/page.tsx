@@ -6,10 +6,10 @@ export default function AboutPage() {
     <main className="journal-content-page about-journal-page">
       <section className="journal-page-hero">
         <div className="container">
-          <p className="eyebrow">ABOUT JPSA</p>
+          <p className="eyebrow">ABOUT JPSTA</p>
           <h1>About the Journal</h1>
           <p className="journal-page-intro">
-            Journal of Physical Science Advances (JPSA)
+            {journalInfo.name} ({journalInfo.abbreviation})
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <article className="subject-area-card" key={area.title}>
               <h3>{area.title}</h3>
               <ul>
-                {area.topics.map((topic) => (
+                {area.areas.map((topic) => (
                   <li key={topic}>{topic}</li>
                 ))}
               </ul>
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <section className="journal-about-links">
         <div className="container journal-about-links-inner">
           <div>
-            <h2>Explore JPSA</h2>
+            <h2>Explore JPSTA</h2>
             <p>
               Learn more about the people behind the journal and its indexing
               information.

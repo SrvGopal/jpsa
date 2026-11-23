@@ -6,9 +6,9 @@ import { articles } from "@/data/articles";
 import { journal } from "@/config/journal";
 
 export const metadata: Metadata = {
-  title: "Issues and Archives | JPSA",
+  title: "Issues and Archives | JPSTA",
   description:
-    "Browse published volumes and issues of the Journal of Physical Sciences Advances."
+    "Browse published volumes and issues of the Journal of Physical Sciences and Technological Advances."
 };
 
 export default function IssuesPage() {

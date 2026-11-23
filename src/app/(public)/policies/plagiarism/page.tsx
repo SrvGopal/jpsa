@@ -51,7 +51,7 @@ const editorialActions = [
   {
     stage: "Rejection of a manuscript",
     description:
-      "Where plagiarism or an unacceptable level of unattributed reuse is established, JPSA may reject the manuscript. Serious cases may also result in restrictions on further submissions by the responsible authors, subject to editorial review.",
+      "Where plagiarism or an unacceptable level of unattributed reuse is established, JPSTA may reject the manuscript. Serious cases may also result in restrictions on further submissions by the responsible authors, subject to editorial review.",
   },
   {
     stage: "After publication",
@@ -75,7 +75,7 @@ export default function Page() {
         <h2>1. Policy Statement</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) maintains a strict
+          Journal of Physical Sciences and Technological Advances (JPSTA) maintains a strict
           position against plagiarism and all forms of unattributed
           appropriation of intellectual work. The journal expects every
           manuscript submitted for publication to demonstrate academic
@@ -136,7 +136,7 @@ export default function Page() {
         <h2>3. Originality and Manuscript Requirements</h2>
 
         <p>
-          Every manuscript submitted to JPSA must represent a genuine
+          Every manuscript submitted to JPSTA must represent a genuine
           scholarly contribution and must appropriately acknowledge
           the work on which it is based. Authors must not submit
           material that has been copied from other publications or
@@ -160,7 +160,7 @@ export default function Page() {
         </p>
 
         <p>
-          Submission of a manuscript to JPSA also requires authors
+          Submission of a manuscript to JPSTA also requires authors
           to disclose relevant overlapping publications and related
           submissions. A manuscript must not be presented as an
           entirely new contribution when substantially the same work
@@ -200,7 +200,7 @@ export default function Page() {
         </p>
 
         <p>
-          Accordingly, JPSA does not treat a numerical similarity
+          Accordingly, JPSTA does not treat a numerical similarity
           percentage as the sole basis for an editorial decision.
           The editorial assessment focuses on whether the manuscript
           demonstrates appropriate attribution and genuine scholarly
@@ -278,7 +278,7 @@ export default function Page() {
         <p>
           Where an investigation establishes that an article
           contains plagiarism or serious unattributed material,
-          JPSA may take corrective action to protect the accuracy
+          JPSTA may take corrective action to protect the accuracy
           and integrity of the published scholarly record.
         </p>
 
@@ -304,7 +304,7 @@ export default function Page() {
         <p>
           Reports should include sufficient information to allow
           the concern to be examined, such as the title or
-          identification of the relevant JPSA article, the
+          identification of the relevant JPSTA article, the
           suspected source material, and a description of the
           passages or research content in question.
         </p>
@@ -321,7 +321,7 @@ export default function Page() {
         <h2>9. Editorial Commitment</h2>
 
         <p>
-          JPSA considers originality, accurate attribution, and
+          JPSTA considers originality, accurate attribution, and
           responsible research conduct essential to scholarly
           communication. The journal expects authors, reviewers,
           and editors to uphold these principles throughout

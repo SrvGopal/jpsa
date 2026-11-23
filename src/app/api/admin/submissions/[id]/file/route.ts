@@ -72,7 +72,7 @@ export async function GET(
       );
     }
     
-    console.error("[JPSA FILE DIAGNOSTIC]", {
+    console.error("[JPSTA FILE DIAGNOSTIC]", {
   submissionId: id,
   kind,
   filePath,

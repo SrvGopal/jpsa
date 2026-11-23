@@ -78,7 +78,7 @@ export default function Page() {
         <h2>1. Policy Statement</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) expects authors,
+          Journal of Physical Science and Technological Advances (JPSTA) expects authors,
           reviewers, editors, and other individuals involved in the
           publication process to disclose interests that could
           influence, or reasonably be perceived to influence,
@@ -353,7 +353,7 @@ export default function Page() {
         <h2>11. Editorial Commitment</h2>
 
         <p>
-          JPSA considers transparency in competing interests
+          JPSTA considers transparency in competing interests
           essential to maintaining confidence in scientific
           publication. The journal expects all participants
           to disclose relevant relationships honestly and
@@ -378,11 +378,11 @@ export default function Page() {
             Publication Ethics Policy
           </Link>
           ,{" "}
-          <Link href="/policies/authorship-policy">
+          <Link href="/policies/authorship">
             Authorship Policy
           </Link>
           , and{" "}
-          <Link href="/policies/plagiarism-policy">
+          <Link href="/policies/plagiarism">
             Plagiarism Policy
           </Link>.
         </p>

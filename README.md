@@ -1,6 +1,6 @@
-# JPSA Phase 1
+# JPSTA Phase 1
 
-Public-facing starter for Journal of Physical Sciences Advances.
+Public-facing starter for Journal of Physical Sciences and Technological Advances.
 
 Run:
 

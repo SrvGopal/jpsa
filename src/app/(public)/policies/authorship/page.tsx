@@ -62,7 +62,7 @@ const nonAuthorContributions = [
 
 const authorResponsibilities = [
   "Ensure that the submitted manuscript represents work in which they have made a genuine and qualifying contribution.",
-  "Review and approve the complete manuscript before it is submitted to JPSA.",
+  "Review and approve the complete manuscript before it is submitted to JPSTA.",
   "Ensure that the research findings, data, references, and descriptions of contributions are accurately presented.",
   "Agree on the author list and the order in which authors are presented before submission.",
   "Disclose relevant conflicts of interest and any overlapping publications or related manuscripts.",
@@ -120,7 +120,7 @@ export default function Page() {
         <h2>1. Policy Statement</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) considers authorship
+          Journal of Physical Science and Technological Advances (JPSTA) considers authorship
           an important recognition of intellectual contribution and
           responsibility in scientific publication. The designation
           of an individual as an author indicates that the person has
@@ -149,7 +149,7 @@ export default function Page() {
         <h2>2. Criteria for Authorship</h2>
 
         <p>
-          JPSA expects every listed author to satisfy all four of the
+          JPSTA expects every listed author to satisfy all four of the
           following criteria. These requirements are intended to ensure
           that authorship reflects both meaningful involvement in the
           research and responsibility for the resulting publication.
@@ -180,7 +180,7 @@ export default function Page() {
         <h2>3. Unacceptable Authorship Practices</h2>
 
         <p>
-          JPSA does not accept practices that distort the actual
+          JPSTA does not accept practices that distort the actual
           contributions of individuals involved in scientific research.
           The following practices are considered inappropriate and
           may constitute breaches of publication ethics.
@@ -246,7 +246,7 @@ export default function Page() {
         </p>
 
         <p>
-          JPSA does not automatically prescribe a universal
+          JPSTA does not automatically prescribe a universal
           interpretation of first, middle, or last authorship
           positions, since conventions may differ across scientific
           disciplines and research groups. The author order should
@@ -319,7 +319,7 @@ export default function Page() {
         <h2>7. Author Contributions Statement</h2>
 
         <p>
-          JPSA may request a statement describing the individual
+          JPSTA may request a statement describing the individual
           contributions of each author. This statement is intended
           to make the responsibilities of the research team
           transparent and to provide a clear record of how the
@@ -395,7 +395,7 @@ export default function Page() {
         </div>
 
         <p>
-          JPSA reserves the right to delay further processing
+          JPSTA reserves the right to delay further processing
           until the authorship request has been adequately
           explained and documented. The journal may decline
           a proposed change where the necessary agreement
@@ -452,7 +452,7 @@ export default function Page() {
 
         <p>
           Where an authorship dispute is brought to the
-          attention of JPSA, the editorial office may request
+          attention of JPSTA, the editorial office may request
           written explanations, contribution statements, and
           confirmation from the individuals involved. The
           journal may suspend the processing or publication
@@ -506,7 +506,7 @@ export default function Page() {
         </p>
 
         <p>
-          JPSA expects all authors to act honestly when
+          JPSTA expects all authors to act honestly when
           identifying contributors and describing their
           respective roles. The purpose of this policy is
           to ensure that academic credit is assigned
@@ -520,7 +520,7 @@ export default function Page() {
 
         <p>
           Authors should also consult the journal's{" "}
-          <Link href="/policies/plagiarism-policy">
+          <Link href="/policies/plagiarism">
             Plagiarism Policy
           </Link>{" "}
           and other applicable publication ethics and

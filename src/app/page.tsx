@@ -19,14 +19,14 @@ export default function Home() {
             </div>
 
             <h1>
-              Advancing knowledge across the physical sciences.
+              Advancing knowledge across science, engineering and technology.
             </h1>
 
             <p className="hero-copy">
               {journal.description}
-              {" "}JPSA provides a scholarly platform for research,
+              {" "}JPSTA provides a scholarly platform for research,
               scientific communication and the dissemination of
-              developments across the physical sciences.
+              developments across its approved interdisciplinary fields.
             </p>
 
             <div className="actions">
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="hero-panel">
             <Image
               src="/logo/jpsa-emblem.png"
-              alt="JPSA journal emblem"
+              alt="JPSTA journal emblem"
               width={220}
               height={220}
               className="hero-logo"
@@ -65,7 +65,7 @@ export default function Home() {
             </strong>
 
             <p>
-              Journal of Physical Sciences Advances
+              {journal.name}
             </p>
 
             <p>
@@ -146,7 +146,7 @@ export default function Home() {
               <h3>No articles published yet</h3>
 
               <p>
-                The JPSA publication archive is being prepared.
+                The JPSTA publication archive is being prepared.
                 Published research and its associated bibliographic
                 records will appear here when available.
               </p>
@@ -178,23 +178,22 @@ export default function Home() {
 
           <div className="prose">
             <p>
-              The Journal of Physical Sciences Advances
-              (JPSA) is intended to provide a scholarly forum
-              for original contributions and developments
-              across the physical sciences.
+              The Journal of Physical Sciences and Technological Advances
+              (JPSTA) provides a scholarly forum for original contributions
+              across science, engineering and technology.
             </p>
 
             <p>
               The journal's scope encompasses theoretical,
               experimental, computational and interdisciplinary
-              research in relevant scientific fields.
+              research across its approved interdisciplinary subject areas.
             </p>
 
             <Link
               href="/about"
               className="text-link"
             >
-              Discover JPSA →
+              Discover JPSTA →
             </Link>
           </div>
         </div>

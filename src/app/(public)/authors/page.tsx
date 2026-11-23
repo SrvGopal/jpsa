@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "For Authors | JPSA",
+  title: "For Authors | JPSTA",
   description:
-    "Author resources, manuscript preparation guidance and publication information for JPSA.",
+    "Author resources, manuscript preparation guidance and publication information for JPSTA.",
 };
 
 const resources = [
@@ -51,9 +51,9 @@ export default function AuthorsPage() {
       <h1>For Authors</h1>
 
       <p className="lead">
-        JPSA welcomes scholarly contributions in physics and
-        interdisciplinary physical sciences. Authors should review
-        the journal's requirements before preparing a manuscript.
+        JPSTA welcomes scholarly contributions across its approved areas
+        of science, engineering and technology. Authors should review the
+        journal's requirements before preparing a manuscript.
       </p>
 
       <section className="prose">
@@ -118,9 +118,12 @@ export default function AuthorsPage() {
         <div className="notice">
           <strong>Submit your manuscript by email</strong>
           <p>
-            Authors may submit manuscripts to the JPSA Editorial Office
+            Authors may submit manuscripts to the JPSTA Editorial Office
             at{" "}
-            <a href="mailto:editor@jpsa-journal.org.in" className="text-link">
+            <a
+              href="mailto:editor@jpsa-journal.org.in"
+              className="text-link"
+            >
               editor@jpsa-journal.org.in
             </a>.
             Please review the submission instructions before sending

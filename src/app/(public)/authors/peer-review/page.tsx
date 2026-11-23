@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Peer Review Process | JPSA",
+  title: "Peer Review Process | JPSTA",
   description:
-    "Understand the editorial assessment and peer review process of the Journal of Physical Sciences Advances.",
+    "Understand the editorial assessment and peer review process of the Journal of Physical Sciences and Technological Advances.",
 };
 
 export default function PeerReviewPage() {
@@ -16,7 +16,7 @@ export default function PeerReviewPage() {
       <h1>Peer Review Process</h1>
 
       <p className="lead">
-        The Journal of Physical Sciences Advances (JPSA) considers
+        The Journal of Physical Sciences and Technological Advances (JPSTA) considers
         peer review an essential part of maintaining the scientific
         quality, reliability and academic integrity of published
         research.
@@ -87,7 +87,7 @@ export default function PeerReviewPage() {
 
         <ul>
           <li>Originality and significance of the research.</li>
-          <li>Relevance to the aims and scope of JPSA.</li>
+          <li>Relevance to the aims and scope of JPSTA.</li>
           <li>Scientific accuracy and technical soundness.</li>
           <li>Appropriateness of theoretical, experimental or computational methods.</li>
           <li>Quality of data analysis and interpretation.</li>
@@ -266,7 +266,7 @@ export default function PeerReviewPage() {
             </Link>
           </li>
           <li>
-            <Link href="/policies/conflict-of-interest">
+            <Link href="/policies/conflicts-of-interest">
               Conflict of Interest Policy
             </Link>
           </li>

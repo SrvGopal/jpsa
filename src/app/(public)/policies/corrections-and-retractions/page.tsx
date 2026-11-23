@@ -129,7 +129,7 @@ export default function Page() {
         <h2>1. Policy Statement</h2>
 
         <p>
-          Journal of Physical Science Advances (JPSA) recognises
+          Journal of Physical Science and Technological Advances (JPSTA) recognises
           its responsibility to maintain the accuracy, reliability,
           and integrity of the scholarly record. The journal
           acknowledges that errors and concerns may occasionally
@@ -149,7 +149,7 @@ export default function Page() {
 
         <p>
           The nature and extent of the issue will determine
-          the appropriate editorial response. JPSA distinguishes
+          the appropriate editorial response. JPSTA distinguishes
           between corrections, expressions of concern, and
           retractions to ensure that the action taken is
           proportionate to the seriousness of the matter.
@@ -291,7 +291,7 @@ export default function Page() {
         <h2>6. Procedure for Investigating Concerns</h2>
 
         <p>
-          JPSA aims to examine post-publication
+          JPSTA aims to examine post-publication
           concerns through a fair, documented,
           and evidence-based editorial process.
           The following stages describe the
@@ -378,7 +378,7 @@ export default function Page() {
         <h2>8. Retraction Notices and the Published Record</h2>
 
         <p>
-          Where an article is retracted, JPSA
+          Where an article is retracted, JPSTA
           should publish a separate retraction
           notice that clearly identifies the
           affected article and explains the
@@ -477,7 +477,7 @@ export default function Page() {
         <h2>11. Editorial Commitment</h2>
 
         <p>
-          JPSA considers the reliability of
+          JPSTA considers the reliability of
           the published scientific record
           an ongoing responsibility. The
           journal is committed to addressing
@@ -507,15 +507,15 @@ export default function Page() {
             Publication Ethics Policy
           </Link>
           ,{" "}
-          <Link href="/policies/plagiarism-policy">
+          <Link href="/policies/plagiarism">
             Plagiarism Policy
           </Link>
           ,{" "}
-          <Link href="/policies/authorship-policy">
+          <Link href="/policies/authorship">
             Authorship Policy
           </Link>
           , and{" "}
-          <Link href="/policies/conflict-of-interest">
+          <Link href="/policies/conflicts-of-interest">
             Conflict of Interest Policy
           </Link>.
         </p>

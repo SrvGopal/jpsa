@@ -1,17 +1,20 @@
 
-export const journal = {
-  name: "Journal of Physical Sciences Advances",
-  shortName: "JPSA",
+import { journalInfo } from "@/lib/journal-content";
 
+export const journal = {
+  name: "Journal of Physical Sciences and Technological Advances",
+  shortName: "JPSTA",
+
+  // Retained to preserve the existing website and email addresses.
   domain: "jpsa-journal.org.in",
   email: "editor@jpsa-journal.org.in",
 
   description:
-    "A scholarly journal dedicated to research, analysis and advances across physics and the physical sciences.",
+     "An interdisciplinary, peer-reviewed scholarly journal publishing original research across the approved sciences, engineering and technology disciplines.",
 
   publicationFrequency: "Monthly",
 
-  accessModel: "Subscription",
+  accessModel: "Open access",
 
   publicationStatus: "Active",
 
@@ -29,7 +32,7 @@ export const journal = {
   manuscriptSubmission: {
     enabled: false,
     message:
-      "Authors may submit manuscripts to the JPSA Editorial Office by email at editor@jpsa-journal.org.in."
+      "Authors may submit manuscripts to the JPSTA Editorial Office by email at editor@jpsa-journal.org.in."
   },
 
   contact: {
@@ -38,16 +41,9 @@ export const journal = {
   }
 };
 
-export const researchAreas = [
-  "Theoretical Physics",
-  "Applied Physics",
-  "Condensed Matter Physics",
-  "Materials Physics",
-  "Optics and Photonics",
-  "Computational Physics",
-  "Nuclear and Particle Physics",
-  "Interdisciplinary Physical Sciences"
-];
+
+export const researchAreas = journalInfo.subjectAreas.map(({ title }) => title);
+
 
 export const journalNavigation = [
   { label: "Home", href: "/" },
