@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
 import { editorialBoard } from "@/lib/journal-content";
 
 export const metadata: Metadata = {
@@ -17,7 +17,6 @@ type Editor = {
   institution?: string;
   city?: string;
   email?: string;
-  photoUrl?: string;
 };
 
 function EditorSection({
@@ -28,187 +27,152 @@ function EditorSection({
   members: Editor[];
 }) {
   return (
-    <section className="editorial-section">
-      <h2>{title}</h2>
+    <section className="editorial-list-section">
+      <h2 className="editorial-list-heading">{title}</h2>
 
-      <div className="editorial-grid">
-        {members.map((member) => {
-          const initials = member.name
-            .replace(/^(Prof\.|Professor|Dr\.)\s*/i, "")
-            .split(/\s+/)
-            .filter(Boolean)
-            .slice(0, 2)
-            .map((part) => part.charAt(0).toUpperCase())
-            .join("");
+      {members.length > 0 ? (
+        <div className="editorial-members">
+          {members.map((member) => (
+            <article className="editorial-member" key={member.name}>
+              <h3>{member.name}</h3>
 
-          return (
-            <article className="editorial-card" key={member.name}>
-              <div className="editorial-photo">
-                {member.photoUrl ? (
-                  <Image
-                    src={member.photoUrl}
-                    alt={`Portrait of ${member.name}`}
-                    width={140}
-                    height={160}
-                    className="editorial-photo-image"
-                  />
-                ) : (
-                  <div
-                    className="editorial-photo-placeholder"
-                    aria-label={`Photograph unavailable for ${member.name}`}
-                  >
-                    <span aria-hidden="true">{initials}</span>
-                  </div>
-                )}
-              </div>
+              {member.designation && (
+                <p>{member.designation}</p>
+              )}
 
-              <div className="editorial-card-content">
-                <h3>{member.name}</h3>
+              {member.department && (
+                <p>{member.department}</p>
+              )}
 
-                {member.designation && (
-                  <p className="editorial-designation">
-                    {member.designation}
-                  </p>
-                )}
+              {member.institution && (
+                <p>{member.institution}</p>
+              )}
 
-                {member.department && (
-                  <p className="editorial-affiliation">
-                    {member.department}
-                  </p>
-                )}
+              {(member.city || member.country) && (
+                <p>
+                  {[member.city, member.country]
+                    .filter(Boolean)
+                    .join(", ")}
+                </p>
+              )}
 
-                {member.institution && (
-                  <p className="editorial-affiliation">
-                    {member.institution}
-                  </p>
-                )}
-
-                {(member.city || member.country) && (
-                  <p className="editorial-location">
-                    {[member.city, member.country]
-                      .filter(Boolean)
-                      .join(", ")}
-                  </p>
-                )}
-
-                {member.email && (
-                  <a
-                    className="editorial-email"
-                    href={`mailto:${member.email}`}
-                  >
+              {member.email && (
+                <p className="editorial-member-email">
+                  <strong>Email:</strong>{" "}
+                  <a href={`mailto:${member.email}`}>
                     {member.email}
                   </a>
-                )}
-              </div>
+                </p>
+              )}
             </article>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <p className="editorial-coming-soon">
+          Information will be announced shortly.
+        </p>
+      )}
     </section>
   );
 }
 
 export default function EditorialBoardPage() {
   return (
-    <main className="container page">
-      <div className="eyebrow">JOURNAL GOVERNANCE</div>
+    <main className="container page editorial-page">
+      <div className="editorial-layout">
+        <div className="editorial-main">
+          <header className="editorial-header">
+            <h1>Editorial Board</h1>
+            <p>
+              The editorial board of the Journal of Physical Sciences
+              and Technological Advances provides academic leadership
+              and oversees the journal&apos;s editorial and scholarly
+              activities.
+            </p>
+          </header>
 
-      <h1>Editorial Board</h1>
+          <EditorSection
+            title="Editor-in-Chief"
+            members={editorialBoard.chiefEditor}
+          />
 
-      <p className="lead">
-        The editorial board is responsible for maintaining the academic
-        standards, editorial integrity and scholarly direction of the
-        Journal of Physical Sciences and Technological Advances.
-      </p>
+          <EditorSection
+            title="Executive Editors"
+            members={editorialBoard.executiveEditors}
+          />
 
-      <section className="prose">
-        <h2>Editorial leadership</h2>
+          <EditorSection
+            title="Technical Editor"
+            members={editorialBoard.technicalEditor}
+          />
 
-        <p>
-          The editorial board comprises the following members who
-          contribute to the journal&apos;s academic and editorial direction.
-        </p>
+          <EditorSection
+            title="Editors"
+            members={editorialBoard.editors}
+          />
 
-        <EditorSection
-          title="Chief Editor"
-          members={editorialBoard.chiefEditor}
-        />
+          <section className="editorial-list-section">
+            <h2 className="editorial-list-heading">
+              Journal Secretariat
+            </h2>
 
-        <EditorSection
-          title="Executive Editors"
-          members={editorialBoard.executiveEditors}
-        />
-
-        <EditorSection
-          title="Technical Editor"
-          members={editorialBoard.technicalEditor}
-        />
-
-        <EditorSection
-          title="Editors"
-          members={editorialBoard.editors}
-        />
-
-        <section className="editorial-section">
-          <h2>Journal Secretariat</h2>
-
-          <article className="editorial-card editorial-secretariat">
-            <div className="editorial-card-content">
+            <article className="editorial-member">
               <h3>{editorialBoard.secretary.name}</h3>
+              <p>{editorialBoard.secretary.designation}</p>
+              <p>{editorialBoard.secretary.office}</p>
+            </article>
+          </section>
+        </div>
 
-              <p className="editorial-designation">
-                {editorialBoard.secretary.designation}
-              </p>
-
-              <p className="editorial-affiliation">
-                {editorialBoard.secretary.office}
-              </p>
+        <aside className="editorial-sidebar">
+          <section className="editorial-sidebar-section">
+            <h2>Journal Information</h2>
+            <div className="editorial-sidebar-links">
+              <Link href="/about/journal-information">
+                Journal Details
+              </Link>
+              <Link href="/about/aims-and-scope">
+                Aims and Scope
+              </Link>
+              <Link href="/indexing">
+                Abstracting and Indexing
+              </Link>
             </div>
-          </article>
-        </section>
+          </section>
 
-        <section className="editorial-section editorial-responsibilities">
-          <h2>Editorial responsibilities</h2>
+          <section className="editorial-sidebar-section">
+            <h2>For Authors</h2>
+            <div className="editorial-sidebar-links">
+              <Link href="/authors/guidelines">
+                Author Guidelines
+              </Link>
+              <Link href="/authors/manuscript-preparation">
+                Manuscript Preparation
+              </Link>
+              <Link href="/authors/peer-review">
+                Peer Review Process
+              </Link>
+              <Link href="/submit">
+                Submit a Manuscript
+              </Link>
+            </div>
+          </section>
 
-          <p>
-            The editorial team oversees the following responsibilities:
-          </p>
-
-          <ul>
-            <li>
-              Assess whether submitted manuscripts fall within the
-              journal&apos;s aims and scope.
-            </li>
-            <li>
-              Coordinate independent peer review and evaluate reviewer
-              recommendations.
-            </li>
-            <li>
-              Make editorial decisions based on scholarly merit and
-              applicable publication policies.
-            </li>
-            <li>
-              Manage revisions, corrections and publication-related
-              concerns.
-            </li>
-            <li>
-              Support transparency, research integrity and responsible
-              scholarly communication.
-            </li>
-          </ul>
-        </section>
-
-        <section className="editorial-section">
-          <h2>Editorial independence</h2>
-
-          <p>
-            Editorial decisions should be based on the academic quality,
-            relevance and integrity of a manuscript. Financial
-            considerations, including any applicable publication charges,
-            must not influence acceptance or rejection decisions.
-          </p>
-        </section>
-      </section>
+          <section className="editorial-sidebar-section">
+            <h2>Editorial Contact</h2>
+            <p>
+              For editorial correspondence and journal-related
+              enquiries, please contact the editorial office.
+            </p>
+            <a
+              className="editorial-sidebar-email"
+              href="mailto:editor@jpsa-journal.org.in"
+            >
+              editor@jpsa-journal.org.in
+            </a>
+          </section>
+        </aside>
+      </div>
     </main>
   );
 }

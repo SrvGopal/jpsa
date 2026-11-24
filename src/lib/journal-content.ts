@@ -136,8 +136,8 @@ export const editorialBoard = {
 
   executiveEditors: [
     {
-      name: "Coming Soon",
-      country: "",
+      name: "Dr. S C Srivastava",
+      country: "India",
     },
   ],
 
@@ -149,17 +149,14 @@ export const editorialBoard = {
   ],
 
   editors: [
+    { name: "Prof. P.C. Srivastava",
+      designation:"Professor" ,
+      department: "Department of Mathematics",
+      institution: "Shri Durga Ji Post Graduate College, Maharaja Suheldev University Azamgarh",
+      city: "Azamgarh – 276128",
+      country: "India" },
     {
-      name: "Dr. Shyamendra Pratap Singh",
-      designation: "Assistant Professor",
-      department: "Department of Physics",
-      institution: "MB Government Post Graduate College",
-      city: "Haldwani, Nainital",
-      country: "India",
-      email: "spsingh.sps21gmail.com",
-    },
-    {
-      name: "Dr. Anoop Kumar Srivastava",
+      name: "Dr.Anoop Kumar Srivastava",
       designation: "Associate Professor & Head",
       department: "Department of Applied Science",
       institution:
@@ -169,10 +166,18 @@ export const editorialBoard = {
       email: "anoopall@gmail.com",
       photoUrl: "/images/editorial/anoop-srivastava.jpg",
     },
+    {
+      name: "Dr. Shyamendra Pratap Singh",
+      designation: "Assistant Professor",
+      department: "Department of Physics",
+      institution: "MB Government Post Graduate College",
+      city: "Haldwani, Nainital",
+      country: "India",
+      email: "spsingh.sps21gmail.com",
+    },
+    
     { name: "Dr. R.K. Mishra", country: "India" },
-    { name: "Dr. P.C. Srivastava", country: "India" },
     { name: "Dr. S.P. Mishra", country: "India" },
-    { name: "Dr. S C Srivastava", country: "India" },
   ],
 
   secretary: {
