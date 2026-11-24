@@ -156,6 +156,7 @@ export const editorialBoard = {
       institution: "MB Government Post Graduate College",
       city: "Haldwani, Nainital",
       country: "India",
+      email: "spsingh.sps21gmail.com",
     },
     {
       name: "Dr. Anoop Kumar Srivastava",
