@@ -143,7 +143,8 @@ export const editorialBoard = {
 
   technicalEditor: [
     {
-      name: "Coming Soon",
+      name: "Er. Ashish Tiwari",
+      institution:"MCA, M.Tech (BITS- Mesra), MBA (IIM), India",
       country: "",
     },
   ],
