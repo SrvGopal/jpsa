@@ -155,6 +155,13 @@ export const editorialBoard = {
       institution: "Shri Durga Ji Post Graduate College, Maharaja Suheldev University, Azamgarh, India",
       country: "" },
     {
+    name: "Prof. R.K. Tyagi",
+    designation:"Professor",
+    department:"Department of Mechanical Engineering",
+    institution: "Amity School of Engineering and Technology, Amity University, Noida, India",
+    country:"",
+    },
+    {
       name: "Dr.Anoop Kumar Srivastava",
       designation: "Associate Professor & Head",
       department: "Department of Applied Science",
