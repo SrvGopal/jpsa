@@ -164,13 +164,20 @@ export const editorialBoard = {
       photoUrl: "/images/editorial/anoop-srivastava.jpg",
     },
     {
+    name: "Dr Anoop Kumar Shukla",
+    designation:"Associate Professor",
+    department:"Department of Mechanical Engineering",
+    institution: "Amity School of Engineering and Technology, Amity University, Noida, India",
+    country:"",
+    },
+    {
       name: "Dr. Shyamendra Pratap Singh",
       designation: "Assistant Professor",
       department: "Department of Physics",
       institution: "MB Government Post Graduate College, Haldwani-Nainital, India",
       country: "",
     },
-    
+
     { name: "Dr. R.K. Mishra", country: "India" },
     { name: "Dr. S.P. Mishra", country: "India" },
   ],
