@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { FormEvent } from "react";
 
 type AcceptedSubmission = {
   id: string;
@@ -61,7 +62,7 @@ export default function PublicationForm({
     setPdfUrl(item.manuscriptUrl || "");
   }
 
-  async function publish(event: React.FormEvent<HTMLFormElement>) {
+  async function publish(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setMessage("");
     setBusy(true);
