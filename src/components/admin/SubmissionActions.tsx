@@ -5,19 +5,19 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const allowedStatuses: Record<string, string[]> = {
-  RECEIVED: ["SCREENING"],
-  SCREENING: ["UNDER_REVIEW"],
-  UNDER_REVIEW: ["REVISION_REQUIRED"],
-  REVISION_REQUIRED: ["UNDER_REVIEW"],
+  RECEIVED: ["SCREENING", "ACCEPTED", "REJECTED"],
+  SCREENING: ["REVISION_REQUIRED", "ACCEPTED", "REJECTED"],
+  UNDER_REVIEW: ["REVISION_REQUIRED", "ACCEPTED", "REJECTED"],
+  REVISION_REQUIRED: ["SCREENING", "ACCEPTED", "REJECTED"],
   ACCEPTED: [],
   REJECTED: []
 };
 
 const labels: Record<string, string> = {
   RECEIVED: "Received",
-  SCREENING: "Initial screening",
-  UNDER_REVIEW: "Under review",
-  REVISION_REQUIRED: "Revision required",
+  SCREENING: "Initial assessment",
+  UNDER_REVIEW: "Editorial assessment",
+  REVISION_REQUIRED: "Revision requested",
   ACCEPTED: "Accepted",
   REJECTED: "Rejected"
 };
@@ -121,7 +121,7 @@ export default function SubmissionActions({
         id="editorial-notes"
         value={notes}
         onChange={(event) => setNotes(event.target.value)}
-        placeholder="Write internal notes about screening, reviewer feedback or editorial decisions..."
+        placeholder="Write an internal note for the editorial office..."
         rows={8}
         maxLength={10000}
         disabled={saving}
