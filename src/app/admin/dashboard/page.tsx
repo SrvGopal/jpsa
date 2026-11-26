@@ -30,20 +30,20 @@ export default async function AdminDashboard() {
   const [
     totalSubmissions,
     received,
-    underReview,
     accepted,
     rejected,
     revisionRequired,
-    pendingPayments,
+    publishedArticles,
+    publishedIssues,
     recentSubmissions
   ] = await Promise.all([
     prisma.submission.count(),
     prisma.submission.count({ where: { status: "RECEIVED" } }),
-    prisma.submission.count({ where: { status: "UNDER_REVIEW" } }),
     prisma.submission.count({ where: { status: "ACCEPTED" } }),
     prisma.submission.count({ where: { status: "REJECTED" } }),
     prisma.submission.count({ where: { status: "REVISION_REQUIRED" } }),
-    prisma.payment.count({ where: { status: "PENDING" } }),
+    prisma.article.count({ where: { status: "PUBLISHED" } }),
+    prisma.issue.count({ where: { status: "PUBLISHED" } }),
     prisma.submission.findMany({
       orderBy: { createdAt: "desc" },
       take: 8,
@@ -82,17 +82,12 @@ export default async function AdminDashboard() {
         <StatCard
           label="New submissions"
           value={received}
-          description="Awaiting initial screening"
-        />
-        <StatCard
-          label="Under review"
-          value={underReview}
-          description="Currently in peer review"
+          description="Awaiting editorial status update"
         />
         <StatCard
           label="Accepted"
           value={accepted}
-          description="Editorially accepted"
+          description="Ready for publication"
         />
         <StatCard
           label="Revision required"
@@ -105,9 +100,14 @@ export default async function AdminDashboard() {
           description="Editorially rejected"
         />
         <StatCard
-          label="Pending payments"
-          value={pendingPayments}
-          description="Awaiting payment verification"
+          label="Published articles"
+          value={publishedArticles}
+          description="Available in the journal archive"
+        />
+        <StatCard
+          label="Published issues"
+          value={publishedIssues}
+          description="Volume and issue records"
         />
       </section>
 
