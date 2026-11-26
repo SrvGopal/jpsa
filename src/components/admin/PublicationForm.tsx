@@ -13,6 +13,8 @@ type AcceptedSubmission = {
   manuscriptUrl: string | null;
 };
 
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 function makeSlug(value: string) {
   return value.toLowerCase().normalize("NFKD")
     .replace(/[^a-z0-9\s-]/g, "")
@@ -31,11 +33,13 @@ export default function PublicationForm({
   const [keywords, setKeywords] = useState("");
   const [type, setType] = useState("Research Article");
   const [slug, setSlug] = useState("");
+  const [slugEdited, setSlugEdited] = useState(false);
   const [volume, setVolume] = useState("1");
   const [issue, setIssue] = useState("1");
   const [year, setYear] = useState(String(new Date().getFullYear()));
   const [publishedAt, setPublishedAt] = useState(new Date().toISOString().slice(0, 10));
   const [issueTitle, setIssueTitle] = useState("January");
+  const [issueTitleEdited, setIssueTitleEdited] = useState(false);
   const [doi, setDoi] = useState("");
   const [pdfUrl, setPdfUrl] = useState("");
   const [message, setMessage] = useState("");
@@ -60,6 +64,7 @@ export default function PublicationForm({
     setKeywords(item.keywords);
     setType(item.articleType || "Research Article");
     setSlug(makeSlug(item.title));
+    setSlugEdited(false);
     setPdfUrl(item.manuscriptUrl || "");
   }
 
@@ -149,7 +154,7 @@ export default function PublicationForm({
 
         <label>
           Article title
-          <input required maxLength={500} value={title} onChange={(event) => { setTitle(event.target.value); if (!slug) setSlug(makeSlug(event.target.value)); }} />
+          <input required maxLength={500} value={title} onChange={(event) => { setTitle(event.target.value); if (!slugEdited) setSlug(makeSlug(event.target.value)); }} />
         </label>
 
         <label>
@@ -179,7 +184,7 @@ export default function PublicationForm({
 
         <label>
           Article page slug
-          <input required maxLength={180} value={slug} onChange={(event) => setSlug(makeSlug(event.target.value))} />
+          <input required maxLength={180} value={slug} onChange={(event) => { setSlugEdited(true); setSlug(makeSlug(event.target.value)); }} />
           <small>Public URL: /articles/{slug || "article-title"}</small>
         </label>
       </section>
@@ -190,13 +195,13 @@ export default function PublicationForm({
 
         <div className="publication-field-grid">
           <label>Volume<input type="number" required min="1" value={volume} onChange={(event) => setVolume(event.target.value)} /></label>
-          <label>Issue<input type="number" required min="1" value={issue} onChange={(event) => setIssue(event.target.value)} /></label>
+          <label>Issue<input type="number" required min="1" value={issue} onChange={(event) => { const value = event.target.value; setIssue(value); if (!issueTitleEdited) setIssueTitle(monthNames[Number(value) - 1] || (value ? `Issue ${value}` : "")); }} /></label>
           <label>Publication year<input type="number" required min="1900" max="2200" value={year} onChange={(event) => setYear(event.target.value)} /></label>
         </div>
 
         <label>
           Issue title / month
-          <input maxLength={250} value={issueTitle} onChange={(event) => setIssueTitle(event.target.value)} placeholder="January" />
+          <input maxLength={250} value={issueTitle} onChange={(event) => { setIssueTitleEdited(true); setIssueTitle(event.target.value); }} placeholder="January" />
         </label>
 
         <label>
