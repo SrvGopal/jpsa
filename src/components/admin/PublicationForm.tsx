@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { FormEvent } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 
 type AcceptedSubmission = {
   id: string;
@@ -41,6 +41,8 @@ export default function PublicationForm({
   const [pdfUrl, setPdfUrl] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadMessage, setUploadMessage] = useState("");
 
   const preview = useMemo(() => ({
     volume: Number(volume),
@@ -60,6 +62,34 @@ export default function PublicationForm({
     setType(item.articleType || "Research Article");
     setSlug(makeSlug(item.title));
     setPdfUrl(item.manuscriptUrl || "");
+  }
+
+  async function uploadPdf(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const input = event.currentTarget;
+    setUploadMessage("");
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const response = await fetch("/api/admin/publications/upload", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        setUploadMessage(result.error || "PDF upload failed.");
+        return;
+      }
+      setPdfUrl(result.path);
+      setUploadMessage(`Uploaded ${result.fileName} successfully.`);
+    } catch {
+      setUploadMessage("Unable to upload the PDF. Please try again.");
+    } finally {
+      setUploading(false);
+      input.value = "";
+    }
   }
 
   async function publish(event: FormEvent<HTMLFormElement>) {
@@ -181,9 +211,17 @@ export default function PublicationForm({
         </label>
 
         <label>
-          Published PDF storage path or URL
-          <input value={pdfUrl} onChange={(event) => setPdfUrl(event.target.value)} placeholder="Required for a downloadable article PDF" />
-          <small>When linked to a submission, its manuscript file path is prefilled. Use the final publication PDF.</small>
+          Upload final publication PDF
+          <input type="file" accept="application/pdf,.pdf" onChange={uploadPdf} disabled={uploading || busy} />
+          <small>PDF only, maximum 20 MB. The file is stored privately and delivered through a temporary secure link.</small>
+        </label>
+        {uploading && <p role="status" className="publication-message">Uploading PDF…</p>}
+        {uploadMessage && <p role="status" className="publication-message">{uploadMessage}</p>}
+
+        <label>
+          PDF storage path or external URL
+          <input value={pdfUrl} onChange={(event) => setPdfUrl(event.target.value)} placeholder="Upload a PDF above or enter its storage path / URL" />
+          <small>For linked submissions, the submitted manuscript path is prefilled. Upload the final typeset PDF to replace it.</small>
         </label>
       </section>
 
@@ -199,7 +237,7 @@ export default function PublicationForm({
       {message && <p role="status" className="publication-message">{message}</p>}
 
       <div className="publication-submit-row">
-        <button type="submit" disabled={busy}>{busy ? "Publishing…" : "Publish article"}</button>
+        <button type="submit" disabled={busy || uploading}>{busy ? "Publishing…" : "Publish article"}</button>
         <span>The article and issue will become publicly visible immediately.</span>
       </div>
     </form>
