@@ -10,7 +10,7 @@ export default async function PublicationsAdminPage() {
 
   const [acceptedSubmissions, publishedArticles] = await Promise.all([
     prisma.submission.findMany({
-      where: { status: "ACCEPTED", article: null },
+      where: { status: "ACCEPTED", article: { is: null } },
       orderBy: { updatedAt: "desc" },
       select: {
         id: true,
