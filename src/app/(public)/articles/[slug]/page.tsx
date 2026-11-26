@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   return {
     title: `${article.title} | ${journal.shortName}`,
     description: article.abstract.slice(0, 160),
-    authors: article.authors.split(";").map((name) => name.trim()).filter(Boolean),
+    authors: article.authors.split(";").map((name) => ({ name: name.trim() })).filter((author) => author.name),
   };
 }
 
