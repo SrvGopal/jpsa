@@ -155,11 +155,12 @@ export const editorialBoard = {
       department: "Department of Mathematics",
       institution: "Shri Durga Ji Post Graduate College, Maharaja Suheldev University, Azamgarh, India",
       country: "" },
-    {
-      name:"Prof. Sanjay Kumar Tyagi",
+
+    { name:"Prof. Sanjay Kumar Tyagi",
       designation:"Professor" ,
       department:"Faculty of Mathematics" ,
       institution:"Higher Colleges of Technology (HCT), UAE",
+      country:"",
     },
     {
     name: "Prof. R.K. Tyagi",
