@@ -4063,3 +4063,6 @@ main.page .eyebrow {
 .publication-message { padding: 12px 15px; border: 1px solid var(--line, #e5e7eb); background: #f8f7f4; color: var(--ink, #202b3c); font-size: 13px; }
 .publication-recent { margin-top: 28px; }
 @media (max-width: 640px) { .publication-field-grid { grid-template-columns: 1fr; } .publication-submit-row { align-items: stretch; flex-direction: column; } }
+
+.admin-dashboard-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.admin-dashboard-actions .button { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: 4px; text-decoration: none; font-size: 12px; font-weight: 700; }
