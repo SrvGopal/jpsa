@@ -144,29 +144,7 @@ export default async function SubmissionDetailPage({
             </div>
           </section>
 
-          <section className="admin-panel detail-panel">
-            <h2>Editorial history</h2>
 
-            {submission.reviews.length === 0 ? (
-              <p className="detail-muted">No reviewer records yet.</p>
-            ) : (
-              <div className="review-record-list">
-                {submission.reviews.map((review) => (
-                  <div className="review-record" key={review.id}>
-                    <strong>{review.reviewerName}</strong>
-                    <span>{review.reviewerEmail}</span>
-                    <span>Status: {formatStatus(review.status)}</span>
-
-                    {review.recommendation && (
-                      <span>
-                        Recommendation: {formatStatus(review.recommendation)}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </section>
 
           {submission.invoice && (
             <section className="admin-panel detail-panel">
