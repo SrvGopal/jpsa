@@ -20,7 +20,7 @@ export default function Header() {
 
         <Link href="/" className="brand">
           <Image
-            src="/logo/jpsa-emblem.png"
+            src="/logo/jpsa-header.png"
             alt="JPSTA Journal Emblem"
             width={64}
             height={64}
