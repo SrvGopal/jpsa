@@ -74,25 +74,12 @@ export async function POST(
     }
 
     if (
-      !["SCREENING", "UNDER_REVIEW", "REVISION_REQUIRED"].includes(
+      !["RECEIVED", "SCREENING", "UNDER_REVIEW", "REVISION_REQUIRED"].includes(
         submission.status
       )
     ) {
       return NextResponse.json(
         { error: "A formal decision cannot be recorded at this stage." },
-        { status: 400 }
-      );
-    }
-
-    if (
-      decision !== "REJECT" &&
-      submission.status === "SCREENING"
-    ) {
-      return NextResponse.json(
-        {
-          error:
-            "Acceptance or revision decisions require the submission to enter peer review.",
-        },
         { status: 400 }
       );
     }
