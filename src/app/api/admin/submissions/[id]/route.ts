@@ -6,10 +6,10 @@ import { getAdminSession } from "@/lib/auth";
 export const runtime = "nodejs";
 
 const allowedTransitions: Record<string, string[]> = {
-  RECEIVED: ["SCREENING"],
-  SCREENING: ["UNDER_REVIEW"],
-  UNDER_REVIEW: ["REVISION_REQUIRED"],
-  REVISION_REQUIRED: ["UNDER_REVIEW"],
+  RECEIVED: ["SCREENING", "ACCEPTED", "REJECTED"],
+  SCREENING: ["REVISION_REQUIRED", "ACCEPTED", "REJECTED"],
+  UNDER_REVIEW: ["REVISION_REQUIRED", "ACCEPTED", "REJECTED"],
+  REVISION_REQUIRED: ["SCREENING", "ACCEPTED", "REJECTED"],
   ACCEPTED: [],
   REJECTED: []
 };
