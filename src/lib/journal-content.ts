@@ -144,7 +144,7 @@ export const editorialBoard = {
   technicalEditor: [
     {
       name: "Er. Ashish Tiwari",
-      institution:"MCA, M.Tech (BIT- Mesra), MBA (IIM), India",
+      institution:"MCA, M.Tech. (BIT- Mesra), MBA (IIM), India",
       country: "",
     },
   ],
