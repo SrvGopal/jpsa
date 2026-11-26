@@ -67,7 +67,10 @@ export default async function AdminDashboard() {
           <p>Welcome back, {admin.name}.</p>
         </div>
 
-        <LogoutButton />
+        <div className="admin-dashboard-actions">
+          <Link className="button button-dark" href="/admin/publications">Publish article</Link>
+          <LogoutButton />
+        </div>
       </header>
 
       <section className="admin-stats-grid">
