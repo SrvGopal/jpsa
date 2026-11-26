@@ -29,12 +29,12 @@ const decisionOptions: {
   {
     value: "MINOR_REVISION",
     label: "Minor Revision",
-    description: "Request limited changes before a final decision.",
+    description: "Request limited changes before a final editorial decision.",
   },
   {
     value: "MAJOR_REVISION",
     label: "Major Revision",
-    description: "Request substantial changes and further evaluation.",
+    description: "Request substantial changes before a final editorial decision.",
   },
   {
     value: "REJECT",
@@ -171,13 +171,7 @@ export default function EditorialDecision({
             required
           >
             <option value="">Select a decision</option>
-            {decisionOptions
-              .filter(
-                (option) =>
-                  currentStatus !== "SCREENING" ||
-                  option.value === "REJECT"
-              )
-              .map((option) => (
+            {decisionOptions.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}
                 </option>
