@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin-guard";
 import SubmissionActions from "@/components/admin/SubmissionActions";
-import ReviewerForm from "@/components/admin/ReviewerForm";
 import EditorialDecision from "@/components/admin/EditorialDecision";
 
 export const dynamic = "force-dynamic";
@@ -25,9 +24,6 @@ export default async function SubmissionDetailPage({
   const submission = await prisma.submission.findUnique({
     where: { id },
     include: {
-      reviews: {
-        orderBy: { invitedAt: "desc" }
-      },
       invoice: {
         select: {
           id: true,
@@ -200,18 +196,7 @@ export default async function SubmissionDetailPage({
             decisionDate={submission.decisionDate?.toISOString() ?? null}
           />
 
-          <ReviewerForm
-            submissionId={submission.id}
-            reviews={submission.reviews.map((review) => ({
-              id: review.id,
-              reviewerName: review.reviewerName,
-              reviewerEmail: review.reviewerEmail,
-              status: review.status,
-              recommendation: review.recommendation,
-              confidentialComments: review.confidentialComments,
-              authorComments: review.authorComments
-            }))}
-          />
+
         </aside>
       </div>
     </main>
