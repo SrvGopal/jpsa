@@ -57,7 +57,7 @@ export default async function IssuesPage() {
             {volumes.map(([volume, volumeIssues]) => (
               <section className="archive-volume" key={volume}>
                 <div className="archive-volume-heading">
-                  <h2>Volume {volume}</h2>
+                  <h2><Link href={`/issues/${volume}`}>Volume {volume} →</Link></h2>
                   <span>{volumeIssues.length} {volumeIssues.length === 1 ? "issue" : "issues"}</span>
                 </div>
                 <div className="issue-list">
