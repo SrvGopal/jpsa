@@ -25,7 +25,6 @@ export default function PublicationForm({
   acceptedSubmissions: AcceptedSubmission[];
 }) {
   const [selectedId, setSelectedId] = useState("");
-  const selected = acceptedSubmissions.find((item) => item.id === selectedId);
   const [title, setTitle] = useState("");
   const [authors, setAuthors] = useState("");
   const [abstract, setAbstract] = useState("");
