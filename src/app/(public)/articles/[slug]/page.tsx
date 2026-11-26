@@ -1,21 +1,83 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles } from "@/data/articles";
+import { prisma } from "@/lib/prisma";
+import { journal } from "@/config/journal";
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+export const dynamic = "force-dynamic";
+
+type ArticlePageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const article = articles.find(a => a.slug === slug);
-  if (!article) notFound();
+  const article = await prisma.article.findUnique({
+    where: { slug },
+    select: { title: true, abstract: true, status: true, authors: true },
+  });
+  if (!article || article.status !== "PUBLISHED") return { title: "Article | JPSTA" };
+  return {
+    title: `${article.title} | ${journal.shortName}`,
+    description: article.abstract.slice(0, 160),
+    authors: article.authors.split(";").map((name) => name.trim()).filter(Boolean),
+  };
+}
 
-  return <article className="container page article-page">
-    <div className="eyebrow">{article.type.toUpperCase()}</div>
-    <h1>{article.title}</h1>
-    <p className="authors">{article.authors.join(" · ")}</p>
-    <div className="article-meta">Volume {article.volume} · Issue {article.issue} · {article.year}</div>
-    <div className="article-actions"><button className="button button-dark">Download PDF</button><button className="button button-light">Cite this article</button></div>
-    <hr />
-    <h2>Abstract</h2><p>{article.abstract}</p>
-    <h2>Keywords</h2><p>{article.keywords.join(" · ")}</p>
-    <h2>1. Introduction</h2><p>Development content demonstrating the final article layout. Replace this with the published article record.</p>
-    <h2>References</h2><p>References will be displayed here for published articles.</p>
-  </article>;
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { slug } = await params;
+  const article = await prisma.article.findUnique({ where: { slug } });
+
+  if (!article || article.status !== "PUBLISHED") notFound();
+
+  const authors = article.authors.split(";").map((author) => author.trim()).filter(Boolean);
+  const keywords = article.keywords.split(",").map((keyword) => keyword.trim()).filter(Boolean);
+  const publishedDate = article.publishedAt
+    ? new Intl.DateTimeFormat("en-IN", { dateStyle: "long" }).format(article.publishedAt)
+    : "Publication date not specified";
+
+  const citation = `${authors.join(", ")}. "${article.title}." ${journal.name}, vol. ${article.volume}, no. ${article.issue}, ${article.year}.${article.doi ? ` DOI: ${article.doi}` : ""}`;
+
+  return (
+    <main className="container page article-page">
+      <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <Link href="/">Home</Link><span>/</span>
+        <Link href="/issues">Journal archive</Link><span>/</span>
+        <Link href={`/issues/${article.volume}/${article.issue}`}>Volume {article.volume}, Issue {article.issue}</Link>
+      </nav>
+
+      <div className="eyebrow">{article.type.toUpperCase()} · JPSTA</div>
+      <h1>{article.title}</h1>
+      <p className="authors">{authors.join(" · ")}</p>
+
+      <div className="article-meta">
+        Volume {article.volume} · Issue {article.issue} · {article.year}
+        <span> · Published {publishedDate}</span>
+      </div>
+
+      <div className="article-actions">
+        <a className="button button-dark" href={`/api/articles/${article.slug}/pdf`} target="_blank" rel="noopener noreferrer">Download PDF</a>
+        {article.doi && <a className="button button-light" href={article.doi.startsWith("http") ? article.doi : `https://doi.org/${article.doi}`} target="_blank" rel="noopener noreferrer">DOI</a>}
+      </div>
+
+      <section className="article-abstract">
+        <h2>Abstract</h2>
+        <p>{article.abstract}</p>
+      </section>
+
+      {keywords.length > 0 && (
+        <section className="article-keywords">
+          <h2>Keywords</h2>
+          <p>{keywords.join(" · ")}</p>
+        </section>
+      )}
+
+      <section className="article-citation">
+        <h2>How to cite</h2>
+        <p>{citation}</p>
+      </section>
+
+      <div className="issue-navigation">
+        <Link className="text-link" href={`/issues/${article.volume}/${article.issue}`}>← Back to this issue</Link>
+      </div>
+    </main>
+  );
 }
