@@ -70,6 +70,19 @@ export async function POST(request: NextRequest) {
     }
 
     const pdfUrl = pdfUrlInput || submission?.manuscriptUrl || null;
+    if (!pdfUrl) {
+      return NextResponse.json({ error: "A final article PDF path or URL is required before publication." }, { status: 400 });
+    }
+    if (/^https?:\\/\\//i.test(pdfUrl)) {
+      try {
+        const parsedPdfUrl = new URL(pdfUrl);
+        if (parsedPdfUrl.protocol !== "https:" && parsedPdfUrl.protocol !== "http:") {
+          return NextResponse.json({ error: "Enter a valid PDF URL." }, { status: 400 });
+        }
+      } catch {
+        return NextResponse.json({ error: "Enter a valid PDF URL." }, { status: 400 });
+      }
+    }
     const result = await prisma.$transaction(async (tx) => {
       await tx.issue.upsert({
         where: { volume_issue_year: { volume, issue, year } },
