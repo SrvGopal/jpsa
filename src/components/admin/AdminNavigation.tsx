@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 type AdminNavigationProps = {
-  active: "dashboard" | "submissions";
+  active: "dashboard" | "submissions" | "publications";
 };
 
 const navigationGroups = [
@@ -11,14 +11,15 @@ const navigationGroups = [
     items: [
       { label: "Overview", href: "/admin/dashboard", key: "dashboard" },
       { label: "Submissions", href: "/admin/submissions", key: "submissions" },
+      { label: "Publish article", href: "/admin/publications", key: "publications" },
     ],
   },
 ];
 
 const upcomingGroups = [
   {
-    label: "PUBLICATIONS",
-    items: ["Articles", "Volumes & Issues"],
+    label: "PUBLICATION TOOLS",
+    items: ["Bulk article editing", "Volume management"],
   },
   {
     label: "JOURNAL MANAGEMENT",
