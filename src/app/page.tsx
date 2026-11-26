@@ -3,10 +3,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ArticleCard from "@/components/ArticleCard";
-import { articles } from "@/data/articles";
+import { prisma } from "@/lib/prisma";
 import { journal, researchAreas } from "@/config/journal";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const records = await prisma.article.findMany({
+    where: { status: "PUBLISHED" },
+    orderBy: [{ publishedAt: "desc" }, { createdAt: "desc" }],
+    take: 5,
+  });
+  const articles = records.map((article) => ({
+    slug: article.slug,
+    type: article.type,
+    title: article.title,
+    authors: article.authors.split(";").map((author) => author.trim()).filter(Boolean),
+    abstract: article.abstract,
+    keywords: article.keywords.split(",").map((keyword) => keyword.trim()).filter(Boolean),
+    volume: article.volume,
+    issue: article.issue,
+    year: article.year,
+    published: article.publishedAt?.toISOString() ?? "",
+    doi: article.doi ?? undefined,
+    pdfUrl: article.pdfUrl ?? undefined,
+  }));
+
   return (
     <>
       {/* JOURNAL HERO */}
