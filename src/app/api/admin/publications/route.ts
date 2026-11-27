@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
     if (!pdfUrl) {
       return NextResponse.json({ error: "A final article PDF path or URL is required before publication." }, { status: 400 });
     }
-    if (/^https?:\\/\\//i.test(pdfUrl)) {
+    if (/^https?:\/\//i.test(pdfUrl)) {
       try {
         const parsedPdfUrl = new URL(pdfUrl);
         if (parsedPdfUrl.protocol !== "https:" && parsedPdfUrl.protocol !== "http:") {

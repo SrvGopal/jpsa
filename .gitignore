@@ -1,7 +1,7 @@
 .neon
 node_modules/
 .env.local
-
+./idea
 # Environment variables
 .env
 .env.*

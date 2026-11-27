@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="footer-identity">
             <Link href="/" className="footer-logo">
               <Image
-                src="/logo/jpsa-emblem.png"
+                src="/logo/jpsa-header.png"
                 alt="JPSTA emblem"
                 width={66}
                 height={66}
